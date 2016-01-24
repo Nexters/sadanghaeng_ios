@@ -485,6 +485,7 @@
 				97368CB31C54AF6400B05A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97368CB41C54AF6400B05A0F /* Build configuration list for PBXNativeTarget "SadanghaengTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +494,7 @@
 				97368CB61C54AF6400B05A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97368CB71C54AF6400B05A0F /* Build configuration list for PBXNativeTarget "SadanghaengUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +503,7 @@
 				97368CB91C54AF6400B05A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
