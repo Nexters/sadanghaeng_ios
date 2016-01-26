@@ -17,5 +17,6 @@ class composeViewController: UIViewController {
         let contents = myTextView.text
         print("Title: \(title)")
         print("Contents View: \(contents)")
+
     }
 }
