@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,45 +16,194 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsP-2q-OUZ">
-                                <rect key="frame" x="274" y="503" width="52" height="30"/>
-                                <state key="normal" title="인증하기"/>
+                                <rect key="frame" x="161" y="570" width="52" height="30"/>
+                                <state key="normal" title="인증하기">
+                                    <color key="titleColor" red="0.91764705879999997" green="0.33333333329999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="epS-8i-8IM" kind="presentation" id="JtK-Hg-tVI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="지금 바로 시작하세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2W-Od-Xw8">
                                 <rect key="frame" x="204" y="461" width="192" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ci2-vq-8RK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ci2-vq-8RK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ci2-vq-8RK"/>
+                                    </mask>
+                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Logo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mal-hc-IW2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="그림 클릭하면 이동" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mal-hc-IW2">
                                 <rect key="frame" x="232" y="162" width="136" height="99"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqn-KI-z2b">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="temp"/>
+                                <connections>
+                                    <segue destination="Ovy-bR-dhy" kind="show" id="L5z-9t-Yg0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="yqn-KI-z2b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="00S-Zq-ct9"/>
                             <constraint firstItem="Mal-hc-IW2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2N3-VW-J2D"/>
                             <constraint firstItem="Mal-hc-IW2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="98" id="9eA-Oe-eyL"/>
                             <constraint firstItem="lsP-2q-OUZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CkA-HC-ING"/>
+                            <constraint firstItem="lsP-2q-OUZ" firstAttribute="top" secondItem="h2W-Od-Xw8" secondAttribute="bottom" constant="40" id="NBi-eR-3N9"/>
                             <constraint firstItem="h2W-Od-Xw8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RlM-32-m3W"/>
+                            <constraint firstItem="lsP-2q-OUZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VuR-Zw-jut"/>
+                            <constraint firstItem="yqn-KI-z2b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="61" id="bN0-j9-kSW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lsP-2q-OUZ" secondAttribute="bottom" constant="67" id="dag-xz-VDP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yqn-KI-z2b" secondAttribute="trailing" constant="62" id="j0O-Vm-q1c"/>
+                            <constraint firstItem="yqn-KI-z2b" firstAttribute="top" secondItem="Mal-hc-IW2" secondAttribute="bottom" constant="39.5" id="tYy-mN-y8s"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yqn-KI-z2b"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="00S-Zq-ct9"/>
+                                <exclude reference="bN0-j9-kSW"/>
+                                <exclude reference="j0O-Vm-q1c"/>
+                                <exclude reference="tYy-mN-y8s"/>
+                                <exclude reference="NBi-eR-3N9"/>
+                                <exclude reference="VuR-Zw-jut"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yqn-KI-z2b"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="00S-Zq-ct9"/>
+                                <include reference="bN0-j9-kSW"/>
+                                <include reference="j0O-Vm-q1c"/>
+                                <include reference="tYy-mN-y8s"/>
+                                <include reference="NBi-eR-3N9"/>
+                                <include reference="VuR-Zw-jut"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="6C1-6M-GbG"/>
-                    <connections>
-                        <segue destination="lC6-hY-7Kp" kind="show" id="Cat-f4-Mc5"/>
-                    </connections>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1310" y="479"/>
+            <point key="canvasLocation" x="1308.75" y="478.5"/>
         </scene>
-        <!--View Controller-->
+        <!--인증하기-->
+        <scene sceneID="AKC-3y-gJc">
+            <objects>
+                <viewController id="bIP-aS-7jb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ixk-0a-a1z"/>
+                        <viewControllerLayoutGuide type="bottom" id="NT7-Ss-tVe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lep-L9-P3A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuE-VZ-TUf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="돌아갈꺼얌"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="155" y="319" width="65" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="VMt-5z-nHN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="tuE-VZ-TUf"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="tuE-VZ-TUf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="인증하기" id="mFY-9B-qA9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ju-od-b0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2102.25" y="1252.5"/>
+        </scene>
+        <!--게시판 목록-->
+        <scene sceneID="bg6-Ty-RmP">
+            <objects>
+                <viewController id="6bp-0U-ygZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AFk-ef-S5S"/>
+                        <viewControllerLayoutGuide type="bottom" id="u1j-N4-YmJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QWh-sr-vmb">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="5" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8pv-YG-Nkh">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="5" id="RKe-4Q-cjq">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RKe-4Q-cjq" id="fvw-AE-4cs">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                </variation>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="8pv-YG-Nkh"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="8pv-YG-Nkh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="게시판 목록" id="NWc-iT-Qju">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="65I-EI-5m9">
+                            <connections>
+                                <segue destination="p0g-px-yAB" kind="show" id="nsW-CI-2HB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTA-ff-nOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2769.75" y="452.5"/>
+        </scene>
+        <!--게시판-->
         <scene sceneID="xTg-FC-zzK">
             <objects>
                 <viewController id="7nv-3s-uVa" sceneMemberID="viewController">
@@ -61,73 +212,192 @@
                         <viewControllerLayoutGuide type="bottom" id="1Bl-PF-aY5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8eK-wu-CE5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VJL-AP-Eo4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJL-AP-Eo4">
                                 <rect key="frame" x="180" y="236" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="110" width="335" height="219"/>
+                                </variation>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="VJL-AP-Eo4"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="VJL-AP-Eo4"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="BnU-B7-8JC"/>
+                    <navigationItem key="navigationItem" title="게시판" id="BnU-B7-8JC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="bdG-fp-BWG"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryO-g4-dnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3463" y="479"/>
+            <point key="canvasLocation" x="2769.75" y="1305.5"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="22V-tu-Nhv">
+        <!--Compose View Controller-->
+        <scene sceneID="pMs-7n-xmO">
             <objects>
-                <tableViewController id="lC6-hY-7Kp" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GKb-UN-Z8w">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <viewController id="p0g-px-yAB" customClass="composeViewController" customModule="Sadanghaeng" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="htz-HH-Pm1"/>
+                        <viewControllerLayoutGuide type="bottom" id="bfp-fU-Eex"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PF9-Qh-M0g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목입력" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ddw-JL-wi9">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="게시판 쓸 내용" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vES-7g-Wmn">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="5Sk-Th-0Hz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5Sk-Th-0Hz"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5Sk-Th-0Hz"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7h-Zt-4jn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="작성 완료">
+                                    <color key="titleColor" red="0.91764705879999997" green="0.33333333329999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="374" width="335" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="p0g-px-yAB" eventType="touchUpInside" id="PMT-h2-Ex2"/>
+                                    <segue destination="Ovy-bR-dhy" kind="show" id="UJm-WL-Aii"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HgT-HM-bIn">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HgT-HM-bIn" id="ote-LA-dhK">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="lC6-hY-7Kp" id="mWW-gf-AlX"/>
-                            <outlet property="delegate" destination="lC6-hY-7Kp" id="Wyi-uZ-EAK"/>
-                        </connections>
-                    </tableView>
+                        <constraints>
+                            <constraint firstItem="ddw-JL-wi9" firstAttribute="leading" secondItem="PF9-Qh-M0g" secondAttribute="leadingMargin" constant="4" id="8Sn-UW-JXb"/>
+                            <constraint firstItem="vES-7g-Wmn" firstAttribute="leading" secondItem="ddw-JL-wi9" secondAttribute="leading" id="NBy-6w-gG0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S7h-Zt-4jn" secondAttribute="trailing" id="ObP-Rs-vaH"/>
+                            <constraint firstItem="ddw-JL-wi9" firstAttribute="trailing" secondItem="PF9-Qh-M0g" secondAttribute="trailingMargin" id="ULV-qq-8hs"/>
+                            <constraint firstItem="ddw-JL-wi9" firstAttribute="top" secondItem="htz-HH-Pm1" secondAttribute="bottom" constant="88" id="cF1-eR-yz4"/>
+                            <constraint firstItem="vES-7g-Wmn" firstAttribute="top" secondItem="ddw-JL-wi9" secondAttribute="bottom" constant="19" id="pDe-wa-k3k"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="S7h-Zt-4jn" secondAttribute="leading" id="qrY-A0-L02"/>
+                            <constraint firstItem="S7h-Zt-4jn" firstAttribute="top" secondItem="vES-7g-Wmn" secondAttribute="bottom" constant="42" id="r7n-lF-5Ps"/>
+                            <constraint firstItem="vES-7g-Wmn" firstAttribute="trailing" secondItem="ddw-JL-wi9" secondAttribute="trailing" id="zmb-BV-8HX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ddw-JL-wi9"/>
+                                <exclude reference="vES-7g-Wmn"/>
+                                <exclude reference="S7h-Zt-4jn"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8Sn-UW-JXb"/>
+                                <exclude reference="ULV-qq-8hs"/>
+                                <exclude reference="cF1-eR-yz4"/>
+                                <exclude reference="NBy-6w-gG0"/>
+                                <exclude reference="pDe-wa-k3k"/>
+                                <exclude reference="zmb-BV-8HX"/>
+                                <exclude reference="ObP-Rs-vaH"/>
+                                <exclude reference="qrY-A0-L02"/>
+                                <exclude reference="r7n-lF-5Ps"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ddw-JL-wi9"/>
+                                <include reference="vES-7g-Wmn"/>
+                                <include reference="S7h-Zt-4jn"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8Sn-UW-JXb"/>
+                                <include reference="ULV-qq-8hs"/>
+                                <include reference="cF1-eR-yz4"/>
+                                <include reference="NBy-6w-gG0"/>
+                                <include reference="pDe-wa-k3k"/>
+                                <include reference="zmb-BV-8HX"/>
+                                <include reference="ObP-Rs-vaH"/>
+                                <include reference="qrY-A0-L02"/>
+                                <include reference="r7n-lF-5Ps"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <segue destination="oTY-jy-rpM" kind="show" id="2hJ-Km-HcW"/>
+                        <outlet property="myTextView" destination="vES-7g-Wmn" id="al5-HJ-yZK"/>
+                        <outlet property="titleTextField" destination="ddw-JL-wi9" id="Fuh-22-uc0"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3v0-Mq-v1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDV-KT-WGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2052" y="479"/>
+            <point key="canvasLocation" x="3518.25" y="452.5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="2i8-bY-vYD">
+        <scene sceneID="2eK-mU-aY5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oTY-jy-rpM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="epS-8i-8IM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a9U-F4-IKQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d8T-1Q-ezz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="7nv-3s-uVa" kind="relationship" relationship="rootViewController" id="Xij-cT-ha9"/>
+                        <segue destination="bIP-aS-7jb" kind="relationship" relationship="rootViewController" id="Gyy-YS-UBv"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MHz-WM-KAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSi-rJ-XuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2748" y="479"/>
+            <point key="canvasLocation" x="1308.75" y="1252.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nJQ-yz-aUB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ovy-bR-dhy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3E6-KJ-f9d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6bp-0U-ygZ" kind="relationship" relationship="rootViewController" id="QxW-gH-1k7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kTw-UE-OIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2043" y="445"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="temp" width="212" height="196"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="UJm-WL-Aii"/>
+    </inferredMetricsTieBreakers>
 </document>
+
