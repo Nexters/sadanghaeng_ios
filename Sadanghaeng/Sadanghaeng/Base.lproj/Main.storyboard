@@ -50,6 +50,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqn-KI-z2b">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="126" id="f0i-Kc-Ryx"/>
                                 </constraints>
@@ -117,22 +118,25 @@
             </objects>
             <point key="canvasLocation" x="1341.75" y="444.5"/>
         </scene>
-        <!--Main-->
+        <!--Main View-->
         <scene sceneID="0Yc-yV-99M">
             <objects>
                 <tableViewController hidesBottomBarWhenPushed="YES" id="bfs-C5-XjK" customClass="MyTableView" customModule="Sadanghaeng" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="102" sectionHeaderHeight="28" sectionFooterHeight="28" id="T2F-hY-Ekj">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="39" sectionHeaderHeight="28" sectionFooterHeight="28" id="T2F-hY-Ekj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="102" id="SXn-d7-XMG">
-                                <rect key="frame" x="0.0" y="92" width="375" height="67"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="39" id="SXn-d7-XMG">
+                                <rect key="frame" x="0.0" y="92" width="375" height="102"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SXn-d7-XMG" id="Un7-wk-p20">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="7nv-3s-uVa" kind="show" id="Alb-Kj-mYs"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -141,7 +145,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Main" id="ExQ-3l-CTs">
+                    <navigationItem key="navigationItem" title="Main View" id="ExQ-3l-CTs">
                         <barButtonItem key="leftBarButtonItem" title="내홈" id="DVi-HQ-mZl"/>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="compose" id="NMt-O6-4pJ">
@@ -159,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="2693.25" y="444.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Write View Controller-->
         <scene sceneID="KJ4-rM-vby">
             <objects>
-                <viewController id="8pN-dL-aDh" sceneMemberID="viewController">
+                <viewController id="8pN-dL-aDh" customClass="WriteViewController" customModule="Sadanghaeng" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UWA-9X-73Q"/>
                         <viewControllerLayoutGuide type="bottom" id="xux-ot-3ku"/>
@@ -178,14 +182,14 @@
                                     <segue destination="HYL-hH-4MM" kind="show" id="BgY-Mw-gPM"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="글 입력" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g4o-cX-Qun">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="글 입력해주세요. 수정 할 수 있어용" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g4o-cX-Qun">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="231" id="TjR-dI-rbQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="TjR-dI-rbQ"/>
@@ -250,6 +254,11 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="myTextField" destination="g4o-cX-Qun" id="T6S-KI-s4e"/>
+                        <outlet property="sendButton" destination="Wvr-dW-Sb9" id="Pn2-MT-T3W"/>
+                        <outlet property="titleField" destination="zTi-WD-jPp" id="9bA-61-MJn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRv-EF-jHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -296,7 +305,7 @@
             </objects>
             <point key="canvasLocation" x="2102.25" y="1252.5"/>
         </scene>
-        <!--게시판-->
+        <!--글 내용-->
         <scene sceneID="xTg-FC-zzK">
             <objects>
                 <viewController id="7nv-3s-uVa" sceneMemberID="viewController">
@@ -308,12 +317,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJL-AP-Eo4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="테이블뷰 누르면 글이 보이지롱~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~😘" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJL-AP-Eo4">
                                 <rect key="frame" x="180" y="236" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="20" y="110" width="335" height="219"/>
                                 </variation>
@@ -331,14 +339,14 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="게시판" id="BnU-B7-8JC">
+                    <navigationItem key="navigationItem" title="글 내용" id="BnU-B7-8JC">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="bdG-fp-BWG"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryO-g4-dnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2847.75" y="1278.5"/>
+            <point key="canvasLocation" x="2946.75" y="1195.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2eK-mU-aY5">
