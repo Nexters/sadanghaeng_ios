@@ -120,13 +120,13 @@
         <!--Main-->
         <scene sceneID="0Yc-yV-99M">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="bfs-C5-XjK" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="67" sectionHeaderHeight="28" sectionFooterHeight="28" id="T2F-hY-Ekj">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="bfs-C5-XjK" customClass="MyTableView" customModule="Sadanghaeng" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="102" sectionHeaderHeight="28" sectionFooterHeight="28" id="T2F-hY-Ekj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="67" id="SXn-d7-XMG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="102" id="SXn-d7-XMG">
                                 <rect key="frame" x="0.0" y="92" width="375" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SXn-d7-XMG" id="Un7-wk-p20">
@@ -168,6 +168,7 @@
                         <viewControllerLayoutGuide type="bottom" id="xux-ot-3ku"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LDM-Z8-yt4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvr-dW-Sb9">
@@ -223,11 +224,11 @@
                                 <exclude reference="SU8-nH-fyz"/>
                                 <exclude reference="twi-Cp-dNH"/>
                                 <exclude reference="uYq-0d-QoV"/>
+                                <exclude reference="hIK-pM-QsF"/>
                                 <exclude reference="4Tv-oi-Vh5"/>
                                 <exclude reference="BXp-5a-eJP"/>
                                 <exclude reference="Rle-eR-gxP"/>
                                 <exclude reference="f1N-2U-VDX"/>
-                                <exclude reference="hIK-pM-QsF"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -240,11 +241,11 @@
                                 <include reference="SU8-nH-fyz"/>
                                 <include reference="twi-Cp-dNH"/>
                                 <include reference="uYq-0d-QoV"/>
+                                <include reference="hIK-pM-QsF"/>
                                 <include reference="4Tv-oi-Vh5"/>
                                 <include reference="BXp-5a-eJP"/>
                                 <include reference="Rle-eR-gxP"/>
                                 <include reference="f1N-2U-VDX"/>
-                                <include reference="hIK-pM-QsF"/>
                             </mask>
                         </variation>
                     </view>
