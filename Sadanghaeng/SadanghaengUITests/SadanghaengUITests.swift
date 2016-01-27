@@ -2,8 +2,8 @@
 //  SadanghaengUITests.swift
 //  SadanghaengUITests
 //
-//  Created by GoDonghyun on 2016. 1. 24..
-//  Copyright © 2016년 Sadanghaeng. All rights reserved.
+//  Created by garin on 2016. 1. 27..
+//  Copyright © 2016년 GARIN. All rights reserved.
 //
 
 import XCTest
