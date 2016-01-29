@@ -11,15 +11,17 @@ import UIKit
 class WriteViewController: UIViewController {
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var myTextField: UITextView!
-    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var postButton: UIBarButtonItem!
 
     // 로그로 내용 확인
-    @IBAction func sendButtonTapped(sender: UIButton) {
+    
+    @IBAction func postButtonTapped(sender: UIBarButtonItem) {
         let title = titleField.text!
         let text = myTextField.text
         print("Title: \(title)")
         print("Text: \(text)")
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,4 +35,6 @@ class WriteViewController: UIViewController {
     func dismissKeyboard() {
         view.endEditing(true)
     }
+    
 }
+

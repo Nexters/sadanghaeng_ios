@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		965768711C5B2CF9007DA828 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965768701C5B2CF9007DA828 /* CustomTextField.swift */; };
 		96B7EF6B1C5AF94F00043BE7 /* MyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EF6A1C5AF94F00043BE7 /* MyTableView.swift */; };
 		96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */; };
 		97368C8D1C54AF6400B05A0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97368C8C1C54AF6400B05A0F /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		965768701C5B2CF9007DA828 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		96B7EF6A1C5AF94F00043BE7 /* MyTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableView.swift; sourceTree = "<group>"; };
 		96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		97368C891C54AF6400B05A0F /* Sadanghaeng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sadanghaeng.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 				97368C931C54AF6400B05A0F /* Assets.xcassets */,
 				97368C951C54AF6400B05A0F /* LaunchScreen.storyboard */,
 				97368C981C54AF6400B05A0F /* Info.plist */,
+				965768701C5B2CF9007DA828 /* CustomTextField.swift */,
 			);
 			path = Sadanghaeng;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				97368C8F1C54AF6400B05A0F /* ViewController.swift in Sources */,
 				96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */,
 				97368C8D1C54AF6400B05A0F /* AppDelegate.swift in Sources */,
+				965768711C5B2CF9007DA828 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

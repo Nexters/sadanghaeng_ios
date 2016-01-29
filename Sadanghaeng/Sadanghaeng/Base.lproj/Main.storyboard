@@ -160,7 +160,7 @@
                             </barButtonItem>
                             <barButtonItem systemItem="search" id="Yvt-Da-N5D">
                                 <connections>
-                                    <segue destination="gfa-MX-vif" kind="show" id="goq-jO-HMs"/>
+                                    <segue destination="gfa-MX-vif" kind="show" id="UjN-vo-yBR"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -240,7 +240,7 @@
             </objects>
             <point key="canvasLocation" x="-83.25" y="392.5"/>
         </scene>
-        <!--Write View Controller-->
+        <!--글쓰기-->
         <scene sceneID="KJ4-rM-vby">
             <objects>
                 <viewController id="8pN-dL-aDh" customClass="WriteViewController" customModule="Sadanghaeng" customModuleProvider="target" sceneMemberID="viewController">
@@ -252,17 +252,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvr-dW-Sb9">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="작성 완료"/>
-                                <connections>
-                                    <action selector="sendButtonTapped:" destination="8pN-dL-aDh" eventType="touchUpInside" id="dP7-ox-nxB"/>
-                                    <segue destination="HYL-hH-4MM" kind="show" id="BgY-Mw-gPM"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="글 입력해주세요. 수정 할 수 있어용" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g4o-cX-Qun">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="231" id="TjR-dI-rbQ"/>
                                 </constraints>
@@ -279,7 +270,7 @@
                                     </mask>
                                 </variation>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zTi-WD-jPp">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zTi-WD-jPp" customClass="CustomTextField" customModule="Sadanghaeng" customModuleProvider="target">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -291,14 +282,11 @@
                             <constraint firstItem="g4o-cX-Qun" firstAttribute="top" secondItem="UWA-9X-73Q" secondAttribute="bottom" constant="105" id="BXp-5a-eJP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="g4o-cX-Qun" secondAttribute="trailing" id="Rle-eR-gxP"/>
                             <constraint firstItem="zTi-WD-jPp" firstAttribute="leading" secondItem="g4o-cX-Qun" secondAttribute="leading" id="SU8-nH-fyz"/>
-                            <constraint firstItem="g4o-cX-Qun" firstAttribute="centerX" secondItem="Wvr-dW-Sb9" secondAttribute="centerX" id="f1N-2U-VDX"/>
-                            <constraint firstItem="Wvr-dW-Sb9" firstAttribute="top" secondItem="g4o-cX-Qun" secondAttribute="bottom" constant="76" id="hIK-pM-QsF"/>
                             <constraint firstItem="zTi-WD-jPp" firstAttribute="top" secondItem="UWA-9X-73Q" secondAttribute="bottom" constant="48" id="twi-Cp-dNH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zTi-WD-jPp" secondAttribute="trailing" constant="4" id="uYq-0d-QoV"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Wvr-dW-Sb9"/>
                                 <exclude reference="g4o-cX-Qun"/>
                                 <exclude reference="zTi-WD-jPp"/>
                             </mask>
@@ -306,16 +294,13 @@
                                 <exclude reference="SU8-nH-fyz"/>
                                 <exclude reference="twi-Cp-dNH"/>
                                 <exclude reference="uYq-0d-QoV"/>
-                                <exclude reference="hIK-pM-QsF"/>
                                 <exclude reference="4Tv-oi-Vh5"/>
                                 <exclude reference="BXp-5a-eJP"/>
                                 <exclude reference="Rle-eR-gxP"/>
-                                <exclude reference="f1N-2U-VDX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Wvr-dW-Sb9"/>
                                 <include reference="g4o-cX-Qun"/>
                                 <include reference="zTi-WD-jPp"/>
                             </mask>
@@ -323,24 +308,31 @@
                                 <include reference="SU8-nH-fyz"/>
                                 <include reference="twi-Cp-dNH"/>
                                 <include reference="uYq-0d-QoV"/>
-                                <include reference="hIK-pM-QsF"/>
                                 <include reference="4Tv-oi-Vh5"/>
                                 <include reference="BXp-5a-eJP"/>
                                 <include reference="Rle-eR-gxP"/>
-                                <include reference="f1N-2U-VDX"/>
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="글쓰기" id="8dp-Dl-HPk">
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="98c-YG-gPA">
+                            <connections>
+                                <action selector="postButtonTapped:" destination="8pN-dL-aDh" id="Wvi-aB-9cg"/>
+                                <segue destination="HYL-hH-4MM" kind="show" id="XZx-oK-KIO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myTextField" destination="g4o-cX-Qun" id="T6S-KI-s4e"/>
-                        <outlet property="sendButton" destination="Wvr-dW-Sb9" id="Pn2-MT-T3W"/>
+                        <outlet property="postButton" destination="98c-YG-gPA" id="gP4-P9-D4P"/>
                         <outlet property="titleField" destination="zTi-WD-jPp" id="9bA-61-MJn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRv-EF-jHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2010.75" y="1163.5"/>
+            <point key="canvasLocation" x="2018.25" y="1163.5"/>
         </scene>
         <!--인증하기-->
         <scene sceneID="AKC-3y-gJc">
@@ -386,7 +378,7 @@
             </objects>
             <point key="canvasLocation" x="2018.25" y="-403.5"/>
         </scene>
-        <!--View Controller-->
+        <!--검색-->
         <scene sceneID="5JQ-OJ-7Ow">
             <objects>
                 <viewController id="gfa-MX-vif" sceneMemberID="viewController">
@@ -420,6 +412,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="검색" id="2Rt-7H-dta"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="kMV-sl-UiX" id="Wxq-3b-ypo"/>
@@ -452,11 +445,19 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="테이블뷰 누르면 글이 보이지롱~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~😘" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VJL-AP-Eo4">
                                 <rect key="frame" x="180" y="236" width="240" height="128"/>
-                                <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="110" width="335" height="219"/>
+                                    <rect key="frame" x="20" y="142" width="335" height="219"/>
+                                </variation>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="글 제목 들어감" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qia-k1-H6f">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="95" width="335" height="30"/>
                                 </variation>
                             </textView>
                         </subviews>
@@ -464,11 +465,13 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="VJL-AP-Eo4"/>
+                                <exclude reference="qia-k1-H6f"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="VJL-AP-Eo4"/>
+                                <include reference="qia-k1-H6f"/>
                             </mask>
                         </variation>
                     </view>
@@ -492,7 +495,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1341.75" y="1163.5"/>
+            <point key="canvasLocation" x="1341.75" y="1183.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2eK-mU-aY5">
@@ -536,6 +539,6 @@
         <image name="user" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dYe-XC-ex8"/>
+        <segue reference="XZx-oK-KIO"/>
     </inferredMetricsTieBreakers>
 </document>
