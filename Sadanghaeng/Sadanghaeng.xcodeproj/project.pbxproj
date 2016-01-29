@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96B7EF6B1C5AF94F00043BE7 /* MyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EF6A1C5AF94F00043BE7 /* MyTableView.swift */; };
+		96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */; };
 		97368C8D1C54AF6400B05A0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97368C8C1C54AF6400B05A0F /* AppDelegate.swift */; };
 		97368C8F1C54AF6400B05A0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97368C8E1C54AF6400B05A0F /* ViewController.swift */; };
 		97368C921C54AF6400B05A0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97368C901C54AF6400B05A0F /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96B7EF6A1C5AF94F00043BE7 /* MyTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableView.swift; sourceTree = "<group>"; };
+		96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		97368C891C54AF6400B05A0F /* Sadanghaeng.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sadanghaeng.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97368C8C1C54AF6400B05A0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97368C8E1C54AF6400B05A0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 			children = (
 				97368C8C1C54AF6400B05A0F /* AppDelegate.swift */,
 				97368C8E1C54AF6400B05A0F /* ViewController.swift */,
+				96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */,
+				96B7EF6A1C5AF94F00043BE7 /* MyTableView.swift */,
 				97368C901C54AF6400B05A0F /* Main.storyboard */,
 				97368C931C54AF6400B05A0F /* Assets.xcassets */,
 				97368C951C54AF6400B05A0F /* LaunchScreen.storyboard */,
@@ -193,7 +199,7 @@
 				TargetAttributes = {
 					97368C881C54AF6400B05A0F = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 78BAHY6D9J;
+						DevelopmentTeam = XM596G3X3G;
 					};
 					97368C9C1C54AF6400B05A0F = {
 						CreatedOnToolsVersion = 7.2;
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96B7EF6B1C5AF94F00043BE7 /* MyTableView.swift in Sources */,
 				97368C8F1C54AF6400B05A0F /* ViewController.swift in Sources */,
+				96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */,
 				97368C8D1C54AF6400B05A0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,10 +408,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Sadanghaeng/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sadanghaeng.ios.Sadanghaeng;
+				PRODUCT_BUNDLE_IDENTIFIER = Sadanghaeng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -411,10 +422,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Sadanghaeng/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sadanghaeng.ios.Sadanghaeng;
+				PRODUCT_BUNDLE_IDENTIFIER = Sadanghaeng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -485,6 +499,7 @@
 				97368CB31C54AF6400B05A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97368CB41C54AF6400B05A0F /* Build configuration list for PBXNativeTarget "SadanghaengTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +508,7 @@
 				97368CB61C54AF6400B05A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97368CB71C54AF6400B05A0F /* Build configuration list for PBXNativeTarget "SadanghaengUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +517,7 @@
 				97368CB91C54AF6400B05A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

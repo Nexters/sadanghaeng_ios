@@ -179,6 +179,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="작성 완료"/>
                                 <connections>
+                                    <action selector="sendButtonTapped:" destination="8pN-dL-aDh" eventType="touchUpInside" id="dP7-ox-nxB"/>
                                     <segue destination="HYL-hH-4MM" kind="show" id="BgY-Mw-gPM"/>
                                 </connections>
                             </button>
