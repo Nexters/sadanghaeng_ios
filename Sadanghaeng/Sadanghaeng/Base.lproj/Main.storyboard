@@ -122,12 +122,12 @@
         <scene sceneID="0Yc-yV-99M">
             <objects>
                 <tableViewController hidesBottomBarWhenPushed="YES" id="bfs-C5-XjK" customClass="MyTableView" customModule="Sadanghaeng" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="39" sectionHeaderHeight="28" sectionFooterHeight="28" id="T2F-hY-Ekj">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" id="T2F-hY-Ekj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="39" id="SXn-d7-XMG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="58" id="SXn-d7-XMG">
                                 <rect key="frame" x="0.0" y="28" width="375" height="39"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SXn-d7-XMG" id="Un7-wk-p20">
@@ -146,7 +146,9 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Main View" id="ExQ-3l-CTs">
-                        <barButtonItem key="leftBarButtonItem" title="내홈" id="DVi-HQ-mZl"/>
+                        <barButtonItem key="leftBarButtonItem" image="user" id="DVi-HQ-mZl">
+                            <inset key="imageInsets" minX="5" minY="7" maxX="0.0" maxY="0.0"/>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="compose" id="NMt-O6-4pJ">
                                 <connections>
@@ -263,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRv-EF-jHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3408.75" y="444.5"/>
+            <point key="canvasLocation" x="3426.75" y="-43.5"/>
         </scene>
         <!--인증하기-->
         <scene sceneID="AKC-3y-gJc">
@@ -347,7 +349,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryO-g4-dnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2946.75" y="1195.5"/>
+            <point key="canvasLocation" x="3426.75" y="715.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2eK-mU-aY5">
@@ -379,7 +381,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bfs-C5-XjK" kind="relationship" relationship="rootViewController" id="8AQ-zE-bqW"/>
+                        <segue destination="bfs-C5-XjK" kind="relationship" relationship="rootViewController" id="K7f-Wa-bae"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVY-HN-CbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -387,6 +389,9 @@
             <point key="canvasLocation" x="2018.25" y="444.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="user" width="42" height="42"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BgY-Mw-gPM"/>
     </inferredMetricsTieBreakers>
