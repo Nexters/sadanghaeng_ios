@@ -20,16 +20,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Sadanghaeng.ViewController.init (Sadanghaeng.ViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Sadanghaeng.ViewController"
+                  symbolName = "Sadanghaeng.ViewController.__deallocating_deinit"
                   moduleName = "Sadanghaeng"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/garin/sadanghaeng_ios/Sadanghaeng/Sadanghaeng/ViewController.swift"
-                  timestampString = "475571774.571339"
+                  timestampString = "475743375.839432"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "57">
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sadanghaeng.ViewController.init (Sadanghaeng.ViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Sadanghaeng.ViewController"
+                  moduleName = "Sadanghaeng"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/garin/sadanghaeng_ios/Sadanghaeng/Sadanghaeng/ViewController.swift"
+                  timestampString = "475743375.839682"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "64">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -39,14 +54,28 @@
                   moduleName = "Sadanghaeng"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/garin/sadanghaeng_ios/Sadanghaeng/Sadanghaeng/ViewController.swift"
-                  timestampString = "475571774.571536"
+                  timestampString = "475743375.839805"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "24">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sadanghaeng/modalViewController.swift"
+            timestampString = "475742852.747952"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
