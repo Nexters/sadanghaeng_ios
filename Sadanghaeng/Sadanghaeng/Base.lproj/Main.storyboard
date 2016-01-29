@@ -22,8 +22,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsP-2q-OUZ">
                                 <rect key="frame" x="161" y="570" width="52" height="30"/>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="인증하기">
-                                    <color key="titleColor" red="0.91764705879999997" green="0.33333333329999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="epS-8i-8IM" kind="presentation" id="JtK-Hg-tVI"/>
@@ -50,12 +51,12 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqn-KI-z2b">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.93725490199999995" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="126" id="f0i-Kc-Ryx"/>
                                 </constraints>
                                 <state key="normal" title="누르면 이동">
-                                    <color key="titleColor" red="0.91764705879999997" green="0.33333333329999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -116,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1341.75" y="444.5"/>
+            <point key="canvasLocation" x="633.75" y="-403.5"/>
         </scene>
         <!--Main View-->
         <scene sceneID="0Yc-yV-99M">
@@ -128,14 +129,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="58" id="SXn-d7-XMG">
-                                <rect key="frame" x="0.0" y="28" width="375" height="39"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SXn-d7-XMG" id="Un7-wk-p20">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="38.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="57.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="7nv-3s-uVa" kind="show" id="Alb-Kj-mYs"/>
+                                    <segue destination="7nv-3s-uVa" kind="show" id="DcE-zO-adp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -145,17 +146,23 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Main View" id="ExQ-3l-CTs">
-                        <barButtonItem key="leftBarButtonItem" image="user" id="DVi-HQ-mZl">
-                            <inset key="imageInsets" minX="5" minY="7" maxX="0.0" maxY="0.0"/>
+                    <navigationItem key="navigationItem" title="Main View" id="80f-Pj-nJJ">
+                        <barButtonItem key="leftBarButtonItem" image="user" id="W6R-sA-XLq">
+                            <connections>
+                                <segue destination="mw6-ae-k1v" kind="show" id="UTZ-eH-XGO"/>
+                            </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="compose" id="NMt-O6-4pJ">
+                            <barButtonItem systemItem="compose" id="Dm4-z0-U2K">
                                 <connections>
-                                    <segue destination="8pN-dL-aDh" kind="show" id="YiL-dj-0Te"/>
+                                    <segue destination="8pN-dL-aDh" kind="show" id="PV0-xg-Y10"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="search" id="MFY-GM-rH7"/>
+                            <barButtonItem systemItem="search" id="Yvt-Da-N5D">
+                                <connections>
+                                    <segue destination="gfa-MX-vif" kind="show" id="goq-jO-HMs"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -163,7 +170,75 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgH-Ua-0sP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2693.25" y="444.5"/>
+            <point key="canvasLocation" x="1341.75" y="392.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GXu-qj-pBd">
+            <objects>
+                <viewController id="mw6-ae-k1v" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jVb-z9-jQg"/>
+                        <viewControllerLayoutGuide type="bottom" id="zeE-W1-qgC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mgQ-bN-NKY">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your id here @snu.ac.kr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zX-Y3-c1A">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRX-Ec-dPC">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Log out">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2zX-Y3-c1A" firstAttribute="top" secondItem="jVb-z9-jQg" secondAttribute="bottom" constant="74" id="5A7-1V-7He"/>
+                            <constraint firstItem="sRX-Ec-dPC" firstAttribute="centerX" secondItem="mgQ-bN-NKY" secondAttribute="centerX" id="7mJ-ju-hkT"/>
+                            <constraint firstItem="2zX-Y3-c1A" firstAttribute="centerX" secondItem="mgQ-bN-NKY" secondAttribute="centerX" id="Ne4-mg-ZdG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sRX-Ec-dPC" secondAttribute="trailing" constant="33" id="Vs8-Od-ANX"/>
+                            <constraint firstItem="sRX-Ec-dPC" firstAttribute="leading" secondItem="mgQ-bN-NKY" secondAttribute="leadingMargin" constant="33" id="lD6-iB-LD0"/>
+                            <constraint firstItem="zeE-W1-qgC" firstAttribute="top" secondItem="sRX-Ec-dPC" secondAttribute="bottom" constant="91" id="naM-FU-NhB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="2zX-Y3-c1A"/>
+                                <exclude reference="sRX-Ec-dPC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="5A7-1V-7He"/>
+                                <exclude reference="Ne4-mg-ZdG"/>
+                                <exclude reference="7mJ-ju-hkT"/>
+                                <exclude reference="Vs8-Od-ANX"/>
+                                <exclude reference="lD6-iB-LD0"/>
+                                <exclude reference="naM-FU-NhB"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="2zX-Y3-c1A"/>
+                                <include reference="sRX-Ec-dPC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="5A7-1V-7He"/>
+                                <include reference="Ne4-mg-ZdG"/>
+                                <include reference="7mJ-ju-hkT"/>
+                                <include reference="Vs8-Od-ANX"/>
+                                <include reference="lD6-iB-LD0"/>
+                                <include reference="naM-FU-NhB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jcu-OQ-Uy7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-83.25" y="392.5"/>
         </scene>
         <!--Write View Controller-->
         <scene sceneID="KJ4-rM-vby">
@@ -265,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRv-EF-jHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3426.75" y="-43.5"/>
+            <point key="canvasLocation" x="2010.75" y="1163.5"/>
         </scene>
         <!--인증하기-->
         <scene sceneID="AKC-3y-gJc">
@@ -281,7 +356,10 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuE-VZ-TUf">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="돌아갈꺼얌"/>
+                                <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="돌아갈꺼얌">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="155" y="319" width="65" height="30"/>
                                 </variation>
@@ -306,7 +384,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ju-od-b0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2102.25" y="1252.5"/>
+            <point key="canvasLocation" x="2018.25" y="-403.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5JQ-OJ-7Ow">
+            <objects>
+                <viewController id="gfa-MX-vif" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DAE-kY-l1x"/>
+                        <viewControllerLayoutGuide type="bottom" id="6pd-xL-M32"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8gG-uT-vKk">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="mze-0f-M74">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="gfa-MX-vif" id="pq5-8V-hwt"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="mze-0f-M74"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="mze-0f-M74"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="kMV-sl-UiX" id="Wxq-3b-ypo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44V-Ca-bEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="kMV-sl-UiX">
+                    <connections>
+                        <outlet property="delegate" destination="gfa-MX-vif" id="4Qj-CG-BPU"/>
+                        <outlet property="searchBar" destination="mze-0f-M74" id="FV4-eW-2xl"/>
+                        <outlet property="searchContentsController" destination="gfa-MX-vif" id="EHK-rh-erj"/>
+                        <outlet property="searchResultsDataSource" destination="gfa-MX-vif" id="9jH-4A-JTN"/>
+                        <outlet property="searchResultsDelegate" destination="gfa-MX-vif" id="ZbE-mX-EdA"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="2010.75" y="392.5"/>
         </scene>
         <!--글 내용-->
         <scene sceneID="xTg-FC-zzK">
@@ -342,14 +472,27 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="글 내용" id="BnU-B7-8JC">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="bdG-fp-BWG"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="글 내용" id="2Yv-7z-H04">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="sgL-S3-CSo"/>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="iW3-gp-dsc" id="TUr-40-d68"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryO-g4-dnP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="iW3-gp-dsc">
+                    <connections>
+                        <outlet property="delegate" destination="7nv-3s-uVa" id="QI2-0t-lPO"/>
+                        <outlet property="searchContentsController" destination="7nv-3s-uVa" id="hcT-7k-GZb"/>
+                        <outlet property="searchResultsDataSource" destination="7nv-3s-uVa" id="X34-Sn-vIi"/>
+                        <outlet property="searchResultsDelegate" destination="7nv-3s-uVa" id="Woh-M1-eEo"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="3426.75" y="715.5"/>
+            <point key="canvasLocation" x="1341.75" y="1163.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2eK-mU-aY5">
@@ -367,7 +510,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSi-rJ-XuM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1341.75" y="1252.5"/>
+            <point key="canvasLocation" x="1341.75" y="-403.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j7q-X7-jHI">
@@ -386,13 +529,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVY-HN-CbX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2018.25" y="444.5"/>
+            <point key="canvasLocation" x="633.75" y="392.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="user" width="42" height="42"/>
+        <image name="user" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BgY-Mw-gPM"/>
+        <segue reference="dYe-XC-ex8"/>
     </inferredMetricsTieBreakers>
 </document>
