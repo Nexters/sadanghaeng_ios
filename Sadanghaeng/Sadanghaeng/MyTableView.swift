@@ -14,6 +14,10 @@ class MyTableView: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let testData: AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("userId") {
+            print(testData)
+        }
     }
     
     override func didReceiveMemoryWarning() {
