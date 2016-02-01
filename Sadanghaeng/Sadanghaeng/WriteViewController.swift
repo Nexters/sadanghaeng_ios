@@ -27,7 +27,7 @@ class WriteViewController: UIViewController {
         super.viewDidLoad()
         
         // 다른 곳 탭하면 키보드 숨기기
-        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+    let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
     }
     
