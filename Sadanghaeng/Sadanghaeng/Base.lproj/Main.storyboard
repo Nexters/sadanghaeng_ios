@@ -267,7 +267,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Tg-Wa-6aS" id="EfK-Pw-kQw">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sK3-pA-pOa">
@@ -342,14 +342,14 @@
                                 <exclude reference="xfb-7N-U3n"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="KWn-gV-YjK"/>
+                                <exclude reference="HFx-8o-ky9"/>
+                                <exclude reference="n4Q-mj-5Xw"/>
+                                <exclude reference="z1T-uI-Z2e"/>
                                 <exclude reference="aYA-ui-SBK"/>
                                 <exclude reference="joB-zQ-oQ8"/>
                                 <exclude reference="n0z-U2-qOu"/>
                                 <exclude reference="nTg-cy-tpO"/>
-                                <exclude reference="HFx-8o-ky9"/>
-                                <exclude reference="n4Q-mj-5Xw"/>
-                                <exclude reference="z1T-uI-Z2e"/>
-                                <exclude reference="KWn-gV-YjK"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -358,14 +358,14 @@
                                 <include reference="xfb-7N-U3n"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="KWn-gV-YjK"/>
+                                <include reference="HFx-8o-ky9"/>
+                                <include reference="n4Q-mj-5Xw"/>
+                                <include reference="z1T-uI-Z2e"/>
                                 <include reference="aYA-ui-SBK"/>
                                 <include reference="joB-zQ-oQ8"/>
                                 <include reference="n0z-U2-qOu"/>
                                 <include reference="nTg-cy-tpO"/>
-                                <include reference="HFx-8o-ky9"/>
-                                <include reference="n4Q-mj-5Xw"/>
-                                <include reference="z1T-uI-Z2e"/>
-                                <include reference="KWn-gV-YjK"/>
                             </mask>
                         </variation>
                     </view>
@@ -660,6 +660,7 @@
                         <viewControllerLayoutGuide type="bottom" id="IQ9-Xm-5qB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fqm-xu-hJT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FRJ-ys-434">
