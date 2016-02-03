@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum PostRouter: URLRequestConvertible {
-    static let baseURLString = "http://localhost:3001"
+    static let baseURLString = Resource.baseURLString
     static var OAuthToken: String?
     
     case CreatePost([String: AnyObject])

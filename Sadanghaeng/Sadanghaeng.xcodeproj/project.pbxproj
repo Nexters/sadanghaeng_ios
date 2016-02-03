@@ -24,6 +24,8 @@
 		97368CA21C54AF6400B05A0F /* SadanghaengTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97368CA11C54AF6400B05A0F /* SadanghaengTests.swift */; };
 		97368CAD1C54AF6400B05A0F /* SadanghaengUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97368CAC1C54AF6400B05A0F /* SadanghaengUITests.swift */; };
 		976B58E31C5E1CB5002D6069 /* PostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976B58E21C5E1CB5002D6069 /* PostRouter.swift */; };
+		97A6A2161C62272D00FA1429 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A6A2151C62272D00FA1429 /* UserRouter.swift */; };
+		97A6A2181C62286D00FA1429 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A6A2171C62286D00FA1429 /* Resource.swift */; };
 		BDAEB3B068743096A22167D8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C4A4CA7613DB8B47849AB4 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		97368CAC1C54AF6400B05A0F /* SadanghaengUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadanghaengUITests.swift; sourceTree = "<group>"; };
 		97368CAE1C54AF6400B05A0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		976B58E21C5E1CB5002D6069 /* PostRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRouter.swift; sourceTree = "<group>"; };
+		97A6A2151C62272D00FA1429 /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		97A6A2171C62286D00FA1429 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		C05E9D2FD716087F7705421C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +161,8 @@
 				976B58E21C5E1CB5002D6069 /* PostRouter.swift */,
 				962E25BF1C60753700F291BC /* TableViewController.swift */,
 				962E25C11C6075D100F291BC /* NewViewController.swift */,
+				97A6A2151C62272D00FA1429 /* UserRouter.swift */,
+				97A6A2171C62286D00FA1429 /* Resource.swift */,
 			);
 			path = Sadanghaeng;
 			sourceTree = "<group>";
@@ -368,6 +374,7 @@
 				96B7EF6B1C5AF94F00043BE7 /* MyTableView.swift in Sources */,
 				97368C8F1C54AF6400B05A0F /* ViewController.swift in Sources */,
 				962E25C21C6075D100F291BC /* NewViewController.swift in Sources */,
+				97A6A2161C62272D00FA1429 /* UserRouter.swift in Sources */,
 				976B58E31C5E1CB5002D6069 /* PostRouter.swift in Sources */,
 				96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */,
 				965768791C5B51F4007DA828 /* CustomView.swift in Sources */,
@@ -376,6 +383,7 @@
 				965768771C5B519C007DA828 /* VerifyViewController.swift in Sources */,
 				97368C8D1C54AF6400B05A0F /* AppDelegate.swift in Sources */,
 				965768711C5B2CF9007DA828 /* CustomTextField.swift in Sources */,
+				97A6A2181C62286D00FA1429 /* Resource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
