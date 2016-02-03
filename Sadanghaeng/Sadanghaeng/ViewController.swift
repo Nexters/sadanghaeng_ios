@@ -31,6 +31,10 @@ class ViewController: UIViewController {
             .responseJSON { response in
                 if let jsonResult = response.result.value {
                     print(jsonResult)
+                    for anItem in jsonResult as! [Dictionary<String, AnyObject>] {
+                        let title = anItem["title"] as! String
+                        print(title)
+                    }
                 }
         }
 

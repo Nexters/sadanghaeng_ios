@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -16,12 +17,21 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.objects.addObject("테스트1")
-      
-//        self.objects.addObject("테스트")
-        
-        self.tableView.reloadData()
+
+
+        Alamofire.request(PostRouter.ReadPosts(["sortBy": "createdAt"]))
+            .responseJSON { response in
+                if let jsonResult = response.result.value {
+                    print(jsonResult)
+                    for anItem in jsonResult as! [Dictionary<String, AnyObject>] {
+                        let title = anItem["title"] as! String
+                        
+                        self.objects.addObject(title)
+                        self.tableView.reloadData()
+                    }
+                }
+        }
+  
     }
     
     override func didReceiveMemoryWarning() {
