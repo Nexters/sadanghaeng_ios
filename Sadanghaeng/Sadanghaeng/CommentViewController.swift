@@ -15,9 +15,16 @@ class CommentViewController: UIViewController, UITableViewDataSource, UITableVie
     let names:[String] = ["유저1","유저2"]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
