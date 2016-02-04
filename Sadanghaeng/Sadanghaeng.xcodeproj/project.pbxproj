@@ -15,6 +15,8 @@
 		965768771C5B519C007DA828 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965768761C5B519C007DA828 /* VerifyViewController.swift */; };
 		965768791C5B51F4007DA828 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965768781C5B51F4007DA828 /* CustomView.swift */; };
 		966032B01C5EFC12009B69C2 /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966032AF1C5EFC12009B69C2 /* CustomUIButton.swift */; };
+		9671B4581C632487000FBC13 /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671B4571C632487000FBC13 /* SegmentedViewController.swift */; };
+		9671B45B1C632AD5000FBC13 /* SegTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671B45A1C632AD5000FBC13 /* SegTableViewCell.swift */; };
 		96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */; };
 		96F719A81C62E2C20008E1A6 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F719A51C62E2C20008E1A6 /* Board.swift */; };
 		96F719A91C62E2C20008E1A6 /* BoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F719A61C62E2C20008E1A6 /* BoardTableViewCell.swift */; };
@@ -59,6 +61,8 @@
 		965768761C5B519C007DA828 /* VerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		965768781C5B51F4007DA828 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		966032AF1C5EFC12009B69C2 /* CustomUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
+		9671B4571C632487000FBC13 /* SegmentedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegmentedViewController.swift; path = ../SegmentedViewController.swift; sourceTree = "<group>"; };
+		9671B45A1C632AD5000FBC13 /* SegTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegTableViewCell.swift; sourceTree = "<group>"; };
 		96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		96F719A51C62E2C20008E1A6 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		96F719A61C62E2C20008E1A6 /* BoardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTableViewCell.swift; sourceTree = "<group>"; };
@@ -124,14 +128,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		96F719A41C62E2B60008E1A6 /* board */ = {
+		9671B4591C632A9E000FBC13 /* SegmentControl */ = {
 			isa = PBXGroup;
 			children = (
+				9671B4571C632487000FBC13 /* SegmentedViewController.swift */,
+				9671B45A1C632AD5000FBC13 /* SegTableViewCell.swift */,
+			);
+			name = SegmentControl;
+			sourceTree = "<group>";
+		};
+		96F719A41C62E2B60008E1A6 /* BoardList */ = {
+			isa = PBXGroup;
+			children = (
+				9671B4591C632A9E000FBC13 /* SegmentControl */,
 				96F719A51C62E2C20008E1A6 /* Board.swift */,
 				96F719A61C62E2C20008E1A6 /* BoardTableViewCell.swift */,
 				96F719A71C62E2C20008E1A6 /* BoardTableViewController.swift */,
 			);
-			name = board;
+			name = BoardList;
+			sourceTree = "<group>";
+		};
+		96F719AB1C631B4A0008E1A6 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				965768701C5B2CF9007DA828 /* CustomTextField.swift */,
+				966032AF1C5EFC12009B69C2 /* CustomUIButton.swift */,
+				965768781C5B51F4007DA828 /* CustomView.swift */,
+			);
+			name = Custom;
 			sourceTree = "<group>";
 		};
 		97368C801C54AF6400B05A0F = {
@@ -159,18 +183,16 @@
 		97368C8B1C54AF6400B05A0F /* Sadanghaeng */ = {
 			isa = PBXGroup;
 			children = (
+				96F719A41C62E2B60008E1A6 /* BoardList */,
+				96F719AB1C631B4A0008E1A6 /* Custom */,
 				97368C8C1C54AF6400B05A0F /* AppDelegate.swift */,
 				962E25BD1C60587400F291BC /* TableViewCell.swift */,
 				97368C8E1C54AF6400B05A0F /* ViewController.swift */,
 				96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */,
-				964444861C6082C100539761 /* Main.storyboard */,
-				966032AF1C5EFC12009B69C2 /* CustomUIButton.swift */,
-				965768781C5B51F4007DA828 /* CustomView.swift */,
 				97368C931C54AF6400B05A0F /* Assets.xcassets */,
-				96F719A41C62E2B60008E1A6 /* board */,
+				964444861C6082C100539761 /* Main.storyboard */,
 				97368C951C54AF6400B05A0F /* LaunchScreen.storyboard */,
 				97368C981C54AF6400B05A0F /* Info.plist */,
-				965768701C5B2CF9007DA828 /* CustomTextField.swift */,
 				965768761C5B519C007DA828 /* VerifyViewController.swift */,
 				976B58E21C5E1CB5002D6069 /* PostRouter.swift */,
 				962E25BF1C60753700F291BC /* TableViewController.swift */,
@@ -391,7 +413,9 @@
 				96F719A91C62E2C20008E1A6 /* BoardTableViewCell.swift in Sources */,
 				97A6A2161C62272D00FA1429 /* UserRouter.swift in Sources */,
 				976B58E31C5E1CB5002D6069 /* PostRouter.swift in Sources */,
+				9671B45B1C632AD5000FBC13 /* SegTableViewCell.swift in Sources */,
 				96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */,
+				9671B4581C632487000FBC13 /* SegmentedViewController.swift in Sources */,
 				965768791C5B51F4007DA828 /* CustomView.swift in Sources */,
 				962E25C01C60753700F291BC /* TableViewController.swift in Sources */,
 				962E25BE1C60587400F291BC /* TableViewCell.swift in Sources */,
