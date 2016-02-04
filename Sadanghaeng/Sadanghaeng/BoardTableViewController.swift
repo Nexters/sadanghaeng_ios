@@ -22,14 +22,14 @@ class BoardTableViewController: UITableViewController {
     }
     
     func loadSampleLists() {
-        let photo1 = UIImage(named: "meal1")!
-        let list1 = Board(name: "Caprese Salad", photo: photo1)!
+        //let photo1 = UIImage(named: "meal1")!
+        let list1 = Board(name: "글이 업쏘", nickname: "구경꾼")!
         
-        let photo2 = UIImage(named: "meal2")!
-        let list2 = Board(name: "Chicken and Potatoes", photo: photo2)!
+        //let photo2 = UIImage(named: "meal2")!
+        let list2 = Board(name: "맥북 좋앙😊", nickname: "apple")!
         
-        let photo3 = UIImage(named: "meal3")!
-        let list3 = Board(name: "Pasta with Meatballs", photo: photo3)!
+        //let photo3 = UIImage(named: "meal3")!
+        let list3 = Board(name: "밥줘라 밥", nickname: "가으리멍멍")!
         
         lists += [list1, list2, list3]
     }
@@ -58,7 +58,8 @@ class BoardTableViewController: UITableViewController {
         let list = lists[indexPath.row]
         
         cell.nameLabel.text = list.name
-        cell.photoImageView.image = list.photo
+        cell.nickname.text = list.nickname
+        //cell.photoImageView.image = list.photo
 
         
         return cell

@@ -15,7 +15,6 @@
 		965768771C5B519C007DA828 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965768761C5B519C007DA828 /* VerifyViewController.swift */; };
 		965768791C5B51F4007DA828 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965768781C5B51F4007DA828 /* CustomView.swift */; };
 		966032B01C5EFC12009B69C2 /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966032AF1C5EFC12009B69C2 /* CustomUIButton.swift */; };
-		96B7EF6B1C5AF94F00043BE7 /* MyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EF6A1C5AF94F00043BE7 /* MyTableView.swift */; };
 		96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */; };
 		96F719A81C62E2C20008E1A6 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F719A51C62E2C20008E1A6 /* Board.swift */; };
 		96F719A91C62E2C20008E1A6 /* BoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F719A61C62E2C20008E1A6 /* BoardTableViewCell.swift */; };
@@ -60,7 +59,6 @@
 		965768761C5B519C007DA828 /* VerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		965768781C5B51F4007DA828 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		966032AF1C5EFC12009B69C2 /* CustomUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
-		96B7EF6A1C5AF94F00043BE7 /* MyTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableView.swift; sourceTree = "<group>"; };
 		96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		96F719A51C62E2C20008E1A6 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		96F719A61C62E2C20008E1A6 /* BoardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTableViewCell.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				962E25BD1C60587400F291BC /* TableViewCell.swift */,
 				97368C8E1C54AF6400B05A0F /* ViewController.swift */,
 				96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */,
-				96B7EF6A1C5AF94F00043BE7 /* MyTableView.swift */,
 				964444861C6082C100539761 /* Main.storyboard */,
 				966032AF1C5EFC12009B69C2 /* CustomUIButton.swift */,
 				965768781C5B51F4007DA828 /* CustomView.swift */,
@@ -388,7 +385,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				966032B01C5EFC12009B69C2 /* CustomUIButton.swift in Sources */,
-				96B7EF6B1C5AF94F00043BE7 /* MyTableView.swift in Sources */,
 				96F719AA1C62E2C20008E1A6 /* BoardTableViewController.swift in Sources */,
 				97368C8F1C54AF6400B05A0F /* ViewController.swift in Sources */,
 				962E25C21C6075D100F291BC /* NewViewController.swift in Sources */,

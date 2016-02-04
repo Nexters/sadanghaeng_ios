@@ -13,15 +13,14 @@ class Board {
     // MARK: Properties
     
     var name: String
-    var photo: UIImage?
+    var nickname: String
 
     // MARK: Initialization
     
-    init?(name: String, photo: UIImage?) {
+    init?(name: String, nickname: String) {
         // Initialize stored properties.
         self.name = name
-        self.photo = photo
-        
+        self.nickname = nickname
         // Initialization should fail if there is no name or if the rating is negative.
         if name.isEmpty {
             return nil
