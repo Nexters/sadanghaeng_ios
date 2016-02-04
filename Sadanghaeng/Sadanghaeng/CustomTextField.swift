@@ -14,6 +14,7 @@ class CustomTextField: UITextField {
         
         self.layer.borderColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1).CGColor
         self.layer.borderWidth = CGFloat(Float(1.0));
+        self.layer.cornerRadius = 5
         
     }
 }
