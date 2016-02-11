@@ -31,10 +31,41 @@ class WriteViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        //super.viewWillAppear(animated)
+        
+        // custom navigation bar
+        
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 206/255, green: 240/255, blue: 235/255, alpha: 1)
+
+//        for parent in self.navigationController!.navigationBar.subviews{
+//            for childView in parent.subviews {
+//                if(childView is UIImageView){
+//                    childView.removeFromSuperview()
+//                }
+//            }
+//        }
+    }
+    override func viewDidAppear(animated: Bool) {
+        let nav = self.navigationController?.navigationBar
+        nav?.translucent = false
+        
+        let img = UIImage()
+        // Remove Shadow
+        self.navigationController?.navigationBar.shadowImage = img
+        self.navigationController?.navigationBar.setBackgroundImage(img, forBarMetrics: UIBarMetrics.Default)
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 206/255, green: 240/255, blue: 235/255, alpha: 1)
+    }
+    
+    
     // 키보드 숨기는 함수
     func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    
+
     
 }
 

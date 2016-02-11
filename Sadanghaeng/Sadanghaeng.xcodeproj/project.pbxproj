@@ -16,6 +16,8 @@
 		9671B45B1C632AD5000FBC13 /* SegTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671B45A1C632AD5000FBC13 /* SegTableViewCell.swift */; };
 		9671B45D1C6337C5000FBC13 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671B45C1C6337C5000FBC13 /* CommentViewController.swift */; };
 		9671B4601C63386B000FBC13 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671B45F1C63386B000FBC13 /* CommentTableViewCell.swift */; };
+		969B3D1A1C6C535800183570 /* CustomCommentField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B3D191C6C535800183570 /* CustomCommentField.swift */; };
+		969B3D1C1C6C6A5300183570 /* DrawLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B3D1B1C6C6A5300183570 /* DrawLine.swift */; };
 		96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */; };
 		96F719A81C62E2C20008E1A6 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F719A51C62E2C20008E1A6 /* Board.swift */; };
 		96F719A91C62E2C20008E1A6 /* BoardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F719A61C62E2C20008E1A6 /* BoardTableViewCell.swift */; };
@@ -61,6 +63,8 @@
 		9671B45A1C632AD5000FBC13 /* SegTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegTableViewCell.swift; sourceTree = "<group>"; };
 		9671B45C1C6337C5000FBC13 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		9671B45F1C63386B000FBC13 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		969B3D191C6C535800183570 /* CustomCommentField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCommentField.swift; sourceTree = "<group>"; };
+		969B3D1B1C6C6A5300183570 /* DrawLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawLine.swift; sourceTree = "<group>"; };
 		96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		96F719A51C62E2C20008E1A6 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		96F719A61C62E2C20008E1A6 /* BoardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardTableViewCell.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 				965768701C5B2CF9007DA828 /* CustomTextField.swift */,
 				966032AF1C5EFC12009B69C2 /* CustomUIButton.swift */,
 				965768781C5B51F4007DA828 /* CustomView.swift */,
+				969B3D191C6C535800183570 /* CustomCommentField.swift */,
+				969B3D1B1C6C6A5300183570 /* DrawLine.swift */,
 			);
 			name = Custom;
 			sourceTree = "<group>";
@@ -428,6 +434,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				966032B01C5EFC12009B69C2 /* CustomUIButton.swift in Sources */,
+				969B3D1C1C6C6A5300183570 /* DrawLine.swift in Sources */,
+				969B3D1A1C6C535800183570 /* CustomCommentField.swift in Sources */,
 				96F719AA1C62E2C20008E1A6 /* BoardTableViewController.swift in Sources */,
 				97368C8F1C54AF6400B05A0F /* ViewController.swift in Sources */,
 				96F719A91C62E2C20008E1A6 /* BoardTableViewCell.swift in Sources */,
