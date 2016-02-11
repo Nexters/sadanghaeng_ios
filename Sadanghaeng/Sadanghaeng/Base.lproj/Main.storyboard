@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -68,7 +68,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="새로운 글은 0개 !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3D-fs-BaZ">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VjE-s8-nrp">
@@ -242,7 +242,8 @@
                                         <exclude reference="nhT-vp-M8n"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="93" y="138" width="164" height="21"/>
                                     <mask key="constraints">
                                         <include reference="nhT-vp-M8n"/>
                                     </mask>
@@ -254,16 +255,27 @@
                                 <state key="normal" title="Log out">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="45" y="569" width="260" height="30"/>
+                                </variation>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2zX-Y3-c1A" firstAttribute="centerX" secondItem="sRX-Ec-dPC" secondAttribute="centerX" id="1LM-TZ-23T"/>
                             <constraint firstItem="2zX-Y3-c1A" firstAttribute="top" secondItem="jVb-z9-jQg" secondAttribute="bottom" constant="118" id="3lR-mb-nxU"/>
-                            <constraint firstItem="zeE-W1-qgC" firstAttribute="top" secondItem="sRX-Ec-dPC" secondAttribute="bottom" constant="135" id="CdY-Yy-bHE"/>
-                            <constraint firstItem="2zX-Y3-c1A" firstAttribute="centerX" secondItem="mgQ-bN-NKY" secondAttribute="centerX" id="ZHZ-YJ-eSz"/>
-                            <constraint firstItem="2zX-Y3-c1A" firstAttribute="leading" secondItem="mgQ-bN-NKY" secondAttribute="leadingMargin" constant="81" id="kjy-XW-NcL"/>
-                            <constraint firstItem="sRX-Ec-dPC" firstAttribute="leading" secondItem="mgQ-bN-NKY" secondAttribute="leadingMargin" constant="33" id="ktN-gW-M02"/>
+                            <constraint firstItem="zeE-W1-qgC" firstAttribute="top" secondItem="sRX-Ec-dPC" secondAttribute="bottom" constant="135" id="CdY-Yy-bHE">
+                                <variation key="widthClass=compact" constant="68"/>
+                            </constraint>
+                            <constraint firstItem="2zX-Y3-c1A" firstAttribute="centerX" secondItem="mgQ-bN-NKY" secondAttribute="centerX" id="ZHZ-YJ-eSz">
+                                <variation key="widthClass=compact" constant="-12.5"/>
+                            </constraint>
+                            <constraint firstItem="2zX-Y3-c1A" firstAttribute="leading" secondItem="mgQ-bN-NKY" secondAttribute="leadingMargin" constant="81" id="kjy-XW-NcL">
+                                <variation key="widthClass=compact" constant="77"/>
+                            </constraint>
+                            <constraint firstItem="sRX-Ec-dPC" firstAttribute="leading" secondItem="mgQ-bN-NKY" secondAttribute="leadingMargin" constant="33" id="ktN-gW-M02">
+                                <variation key="widthClass=compact" constant="29"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -433,7 +445,7 @@
                                                         <constraint firstAttribute="width" constant="197" id="6eJ-eg-RJf"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -522,22 +534,22 @@
                                                 <mask key="constraints">
                                                     <exclude reference="DgY-XN-RYv"/>
                                                     <exclude reference="kBa-cY-kG0"/>
-                                                    <exclude reference="9YH-U9-VSd"/>
-                                                    <exclude reference="KMU-2m-NgB"/>
-                                                    <exclude reference="ROY-eH-Vv9"/>
-                                                    <exclude reference="Uxg-IO-IlS"/>
                                                     <exclude reference="Y2h-4v-rQv"/>
                                                     <exclude reference="dBd-T2-vRI"/>
                                                     <exclude reference="ed3-nb-BIJ"/>
                                                     <exclude reference="zRa-fO-pKL"/>
-                                                    <exclude reference="I8l-om-KZL"/>
-                                                    <exclude reference="kIc-I2-nyK"/>
+                                                    <exclude reference="9YH-U9-VSd"/>
+                                                    <exclude reference="KMU-2m-NgB"/>
+                                                    <exclude reference="ROY-eH-Vv9"/>
+                                                    <exclude reference="Uxg-IO-IlS"/>
                                                     <exclude reference="4Ue-gT-rWI"/>
                                                     <exclude reference="Dda-h8-nax"/>
                                                     <exclude reference="Gvj-e4-uF9"/>
                                                     <exclude reference="Pxo-Ky-ipp"/>
                                                     <exclude reference="sZy-Mj-cVN"/>
                                                     <exclude reference="v6x-wL-KAj"/>
+                                                    <exclude reference="I8l-om-KZL"/>
+                                                    <exclude reference="kIc-I2-nyK"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
@@ -551,22 +563,22 @@
                                                 <mask key="constraints">
                                                     <exclude reference="DgY-XN-RYv"/>
                                                     <include reference="kBa-cY-kG0"/>
-                                                    <include reference="9YH-U9-VSd"/>
-                                                    <include reference="KMU-2m-NgB"/>
-                                                    <include reference="ROY-eH-Vv9"/>
-                                                    <include reference="Uxg-IO-IlS"/>
                                                     <exclude reference="Y2h-4v-rQv"/>
                                                     <include reference="dBd-T2-vRI"/>
                                                     <exclude reference="ed3-nb-BIJ"/>
                                                     <include reference="zRa-fO-pKL"/>
-                                                    <include reference="I8l-om-KZL"/>
-                                                    <include reference="kIc-I2-nyK"/>
+                                                    <include reference="9YH-U9-VSd"/>
+                                                    <include reference="KMU-2m-NgB"/>
+                                                    <include reference="ROY-eH-Vv9"/>
+                                                    <include reference="Uxg-IO-IlS"/>
                                                     <include reference="4Ue-gT-rWI"/>
                                                     <include reference="Dda-h8-nax"/>
                                                     <include reference="Gvj-e4-uF9"/>
                                                     <exclude reference="Pxo-Ky-ipp"/>
                                                     <include reference="sZy-Mj-cVN"/>
                                                     <exclude reference="v6x-wL-KAj"/>
+                                                    <include reference="I8l-om-KZL"/>
+                                                    <include reference="kIc-I2-nyK"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -582,14 +594,14 @@
                                     <outlet property="delegate" destination="c4K-a7-9at" id="RGB-HZ-gBW"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOz-2x-JDA" customClass="CustomUIButton" customModule="Sadanghaeng" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOz-2x-JDA" customClass="CustomUIButton" customModule="Sadanghaeng" customModuleProvider="target">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.69803921568627447" green="0.8784313725490196" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="MQ9-Xm-ZRD"/>
                                     <constraint firstAttribute="width" constant="50" id="Snq-Ed-7a8"/>
                                 </constraints>
-                                <state key="normal" title="글쓰기">
+                                <state key="normal" image="post">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -608,26 +620,42 @@
                                     <segue destination="8pN-dL-aDh" kind="show" id="IX1-ou-XSa"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xd4-YA-IJk">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="169" y="619" width="39" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="EOz-2x-JDA" firstAttribute="leading" secondItem="Qk0-rK-Sqm" secondAttribute="leading" id="2Pm-eJ-Let">
+                                <variation key="widthClass=compact" constant="300"/>
+                            </constraint>
                             <constraint firstItem="Ynr-YX-ZH3" firstAttribute="top" secondItem="Qk0-rK-Sqm" secondAttribute="bottom" constant="8" symbolic="YES" id="Aq8-th-IGM"/>
                             <constraint firstItem="Qk0-rK-Sqm" firstAttribute="leading" secondItem="Ynr-YX-ZH3" secondAttribute="leading" id="CE9-vW-IPt"/>
                             <constraint firstAttribute="trailing" secondItem="Ynr-YX-ZH3" secondAttribute="trailing" id="OE1-nQ-YbA"/>
                             <constraint firstItem="Qk0-rK-Sqm" firstAttribute="top" secondItem="Fiy-5g-7B6" secondAttribute="bottom" constant="8" symbolic="YES" id="St9-Bx-K5U"/>
                             <constraint firstItem="Qk0-rK-Sqm" firstAttribute="leading" secondItem="QkY-Zf-Ad8" secondAttribute="leading" id="WK0-Jx-3hZ"/>
                             <constraint firstItem="Ynr-YX-ZH3" firstAttribute="trailing" secondItem="Qk0-rK-Sqm" secondAttribute="trailing" id="Xh6-qo-mun"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EOz-2x-JDA" secondAttribute="trailing" constant="9" id="mds-rS-RxL"/>
+                            <constraint firstItem="EOz-2x-JDA" firstAttribute="centerY" secondItem="QkY-Zf-Ad8" secondAttribute="centerY" id="m9S-hw-j2M">
+                                <variation key="widthClass=compact" constant="271.5"/>
+                            </constraint>
                             <constraint firstItem="Ynr-YX-ZH3" firstAttribute="bottom" secondItem="I1q-NT-PD2" secondAttribute="top" id="oT1-P3-im5"/>
-                            <constraint firstItem="I1q-NT-PD2" firstAttribute="top" secondItem="EOz-2x-JDA" secondAttribute="bottom" constant="22" id="row-tV-5i6"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Qk0-rK-Sqm"/>
                                 <exclude reference="Ynr-YX-ZH3"/>
                                 <exclude reference="EOz-2x-JDA"/>
+                                <exclude reference="Xd4-YA-IJk"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="2Pm-eJ-Let"/>
+                                <exclude reference="m9S-hw-j2M"/>
                                 <exclude reference="CE9-vW-IPt"/>
                                 <exclude reference="St9-Bx-K5U"/>
                                 <exclude reference="WK0-Jx-3hZ"/>
@@ -635,8 +663,6 @@
                                 <exclude reference="OE1-nQ-YbA"/>
                                 <exclude reference="Xh6-qo-mun"/>
                                 <exclude reference="oT1-P3-im5"/>
-                                <exclude reference="mds-rS-RxL"/>
-                                <exclude reference="row-tV-5i6"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -644,8 +670,11 @@
                                 <include reference="Qk0-rK-Sqm"/>
                                 <include reference="Ynr-YX-ZH3"/>
                                 <include reference="EOz-2x-JDA"/>
+                                <include reference="Xd4-YA-IJk"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="2Pm-eJ-Let"/>
+                                <include reference="m9S-hw-j2M"/>
                                 <include reference="CE9-vW-IPt"/>
                                 <include reference="St9-Bx-K5U"/>
                                 <include reference="WK0-Jx-3hZ"/>
@@ -653,8 +682,6 @@
                                 <include reference="OE1-nQ-YbA"/>
                                 <include reference="Xh6-qo-mun"/>
                                 <include reference="oT1-P3-im5"/>
-                                <include reference="mds-rS-RxL"/>
-                                <include reference="row-tV-5i6"/>
                             </mask>
                         </variation>
                     </view>
@@ -701,7 +728,7 @@
                                             <constraint firstAttribute="height" constant="21" id="jYC-5s-S1t"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -864,7 +891,7 @@
                                     <constraint firstAttribute="height" constant="21" id="112-LQ-8WO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -880,7 +907,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메일함에서 메일을 확인해 주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEi-dq-7dM">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkh-Uz-rSP">
@@ -1051,7 +1078,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="댓글 댓글 댓글 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJU-Xx-gaz">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact" misplaced="YES">
                                                         <rect key="frame" x="13" y="18" width="205" height="26"/>
@@ -1207,7 +1234,7 @@
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="댓글을 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JNf-E7-Uc1" customClass="CustomTextField" customModule="Sadanghaeng" customModuleProvider="target">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -1218,7 +1245,7 @@
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="안녕 반가워어어어어어ㅓ엉어ㅓ어어어어어어어엉" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehO-YE-tTi">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="197" id="GLj-QC-ooZ"/>
                                 </constraints>
@@ -1459,6 +1486,7 @@
     <resources>
         <image name="down" width="24" height="24"/>
         <image name="logo_big" width="130" height="130"/>
+        <image name="post" width="44" height="44"/>
         <image name="up" width="24" height="24"/>
         <image name="user" width="22" height="22"/>
     </resources>
