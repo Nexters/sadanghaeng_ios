@@ -73,7 +73,7 @@ class CommentViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var returnValue = comments.count
+        let returnValue = comments.count
         return returnValue
     }
     
