@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +37,29 @@ class ViewController: UIViewController {
                     }
                 }
         }
+        ////////////keyboard move up
 
+        ////////////
+        
+        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
         
     }
+    
+
+    
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
 }

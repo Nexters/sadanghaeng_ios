@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
 
-        UIBarButtonItem.appearance().tintColor = UIColor.orangeColor()
+        UIBarButtonItem.appearance().tintColor = UIColor(red: 252/255, green: 86/255, blue: 80/255, alpha: 1)
         
-        UINavigationBar.appearance().tintColor = UIColor.orangeColor()
+        UINavigationBar.appearance().tintColor = UIColor(red: 252/255, green: 86/255, blue: 80/255, alpha: 1)
         
         return true
     }
