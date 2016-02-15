@@ -98,4 +98,25 @@ class CommentViewController: UIViewController, UITableViewDataSource, UITableVie
         
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
     }
+    
+    @IBAction func ActionSheetButtonTapped(sender: AnyObject) {
+        var myActionSheet = UIAlertController(title: "이 게시물에 대한 기능", message: "뭐 할까요?", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let edit = UIAlertAction(title: "수정", style: .Default) { (Alert:UIAlertAction) -> Void in
+            print("edit tapped")
+        }
+        let delete = UIAlertAction(title: "삭제", style: .Default) { (Alert:UIAlertAction) -> Void in
+            print("delte tapped")
+        }
+        let report = UIAlertAction(title: "신고", style: .Default) { (Alert:UIAlertAction) -> Void in
+            print("report tapped")
+        }
+        
+        myActionSheet.addAction(edit)
+        myActionSheet.addAction(delete)
+        myActionSheet.addAction(report)
+        
+        self.presentViewController(myActionSheet, animated: true, completion: nil)
+    }
+    
 }

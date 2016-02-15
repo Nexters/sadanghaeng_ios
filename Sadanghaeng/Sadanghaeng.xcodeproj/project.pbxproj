@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		960791CD1C717FE700B8D15F /* SearchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960791CC1C717FE700B8D15F /* SearchBarController.swift */; };
 		964144981C6D759800DC07C0 /* AutoKeyboardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964144971C6D759800DC07C0 /* AutoKeyboardScrollView.swift */; };
 		964444881C6082C100539761 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964444861C6082C100539761 /* Main.storyboard */; };
 		965768711C5B2CF9007DA828 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965768701C5B2CF9007DA828 /* CustomTextField.swift */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		38F2E8210DB104A83AA681FB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		40C4A4CA7613DB8B47849AB4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		960791CC1C717FE700B8D15F /* SearchBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarController.swift; sourceTree = "<group>"; };
 		964144971C6D759800DC07C0 /* AutoKeyboardScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoKeyboardScrollView.swift; sourceTree = "<group>"; };
 		964444871C6082C100539761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		965768701C5B2CF9007DA828 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				964144961C6D759800DC07C0 /* Source */,
 				9671B4621C63397E000FBC13 /* Router */,
 				97368C931C54AF6400B05A0F /* Assets.xcassets */,
+				960791CC1C717FE700B8D15F /* SearchBarController.swift */,
 			);
 			path = Sadanghaeng;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				9671B4601C63386B000FBC13 /* CommentTableViewCell.swift in Sources */,
 				9671B45B1C632AD5000FBC13 /* SegTableViewCell.swift in Sources */,
 				96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */,
+				960791CD1C717FE700B8D15F /* SearchBarController.swift in Sources */,
 				9671B4581C632487000FBC13 /* SegmentedViewController.swift in Sources */,
 				965768791C5B51F4007DA828 /* CustomView.swift in Sources */,
 				96F719A81C62E2C20008E1A6 /* Board.swift in Sources */,
