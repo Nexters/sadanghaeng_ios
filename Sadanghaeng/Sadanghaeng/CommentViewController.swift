@@ -111,10 +111,14 @@ class CommentViewController: UIViewController, UITableViewDataSource, UITableVie
         let report = UIAlertAction(title: "신고", style: .Default) { (Alert:UIAlertAction) -> Void in
             print("report tapped")
         }
+        let close = UIAlertAction(title: "취소", style: .Cancel) { (Alert:UIAlertAction) -> Void in
+            print("close tapped")
+        }
         
         myActionSheet.addAction(edit)
         myActionSheet.addAction(delete)
         myActionSheet.addAction(report)
+        myActionSheet.addAction(close)
         
         self.presentViewController(myActionSheet, animated: true, completion: nil)
     }
