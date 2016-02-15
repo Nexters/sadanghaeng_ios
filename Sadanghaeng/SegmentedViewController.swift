@@ -10,6 +10,7 @@ import UIKit
 
 class SegmentedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+
     @IBOutlet weak var mySegmentedControl: UISegmentedControl!
     @IBOutlet weak var myTableView: UITableView!
     
@@ -99,5 +100,4 @@ class SegmentedViewController: UIViewController, UITableViewDataSource, UITableV
     @IBAction func segmentedControlActionChanged(sender: AnyObject) {
         myTableView.reloadData()
     }
-    
 }

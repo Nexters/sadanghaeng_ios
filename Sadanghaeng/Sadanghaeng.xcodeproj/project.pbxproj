@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		960791CD1C717FE700B8D15F /* SearchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960791CC1C717FE700B8D15F /* SearchBarController.swift */; };
+		960791CF1C71B80C00B8D15F /* SeachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960791CE1C71B80C00B8D15F /* SeachView.swift */; };
+		960791D11C71B85900B8D15F /* Candy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960791D01C71B85900B8D15F /* Candy.swift */; };
 		964144981C6D759800DC07C0 /* AutoKeyboardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964144971C6D759800DC07C0 /* AutoKeyboardScrollView.swift */; };
 		964444881C6082C100539761 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964444861C6082C100539761 /* Main.storyboard */; };
 		965768711C5B2CF9007DA828 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965768701C5B2CF9007DA828 /* CustomTextField.swift */; };
@@ -55,6 +57,8 @@
 		38F2E8210DB104A83AA681FB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		40C4A4CA7613DB8B47849AB4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		960791CC1C717FE700B8D15F /* SearchBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarController.swift; sourceTree = "<group>"; };
+		960791CE1C71B80C00B8D15F /* SeachView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeachView.swift; sourceTree = "<group>"; };
+		960791D01C71B85900B8D15F /* Candy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candy.swift; sourceTree = "<group>"; };
 		964144971C6D759800DC07C0 /* AutoKeyboardScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoKeyboardScrollView.swift; sourceTree = "<group>"; };
 		964444871C6082C100539761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		965768701C5B2CF9007DA828 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 				97368C8E1C54AF6400B05A0F /* ViewController.swift */,
 				97368C8C1C54AF6400B05A0F /* AppDelegate.swift */,
 				964444861C6082C100539761 /* Main.storyboard */,
+				960791CE1C71B80C00B8D15F /* SeachView.swift */,
+				960791D01C71B85900B8D15F /* Candy.swift */,
 				97368C951C54AF6400B05A0F /* LaunchScreen.storyboard */,
 				97368C981C54AF6400B05A0F /* Info.plist */,
 				965768761C5B519C007DA828 /* VerifyViewController.swift */,
@@ -454,6 +460,7 @@
 				969B3D1C1C6C6A5300183570 /* DrawLine.swift in Sources */,
 				97368C8F1C54AF6400B05A0F /* ViewController.swift in Sources */,
 				97A6A2161C62272D00FA1429 /* UserRouter.swift in Sources */,
+				960791CF1C71B80C00B8D15F /* SeachView.swift in Sources */,
 				976B58E31C5E1CB5002D6069 /* PostRouter.swift in Sources */,
 				9671B4601C63386B000FBC13 /* CommentTableViewCell.swift in Sources */,
 				9671B45B1C632AD5000FBC13 /* SegTableViewCell.swift in Sources */,
@@ -464,6 +471,7 @@
 				96F719A81C62E2C20008E1A6 /* Board.swift in Sources */,
 				965768771C5B519C007DA828 /* VerifyViewController.swift in Sources */,
 				97368C8D1C54AF6400B05A0F /* AppDelegate.swift in Sources */,
+				960791D11C71B85900B8D15F /* Candy.swift in Sources */,
 				965768711C5B2CF9007DA828 /* CustomTextField.swift in Sources */,
 				9658D6081C6CAD2500D601E9 /* MyUserViewController.swift in Sources */,
 				97A6A2181C62286D00FA1429 /* Resource.swift in Sources */,
