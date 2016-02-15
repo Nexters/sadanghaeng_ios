@@ -19,6 +19,7 @@ import AutoKeyboardScrollView
 
 class VerifyViewController: UIViewController {
     
+
     @IBOutlet weak var wrapperView: UIView!
     var scrollView = AutoKeyboardScrollView()
     var views = [String: UIView]()
@@ -49,6 +50,7 @@ class VerifyViewController: UIViewController {
         scrollView.userInteractionEnabled = true
         scrollView.bounces = true
         scrollView.scrollEnabled = true
+        
     }
     
     func setupConstraints() {
