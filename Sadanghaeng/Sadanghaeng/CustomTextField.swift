@@ -29,3 +29,6 @@ class CustomCommentField: UITextField {
         
     }
 }
+class CustomTextView : UITextView {
+    
+}
