@@ -46,7 +46,7 @@ class CommentViewController: UIViewController, UITableViewDataSource, UITableVie
         // 3
         let animationDurarion = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSTimeInterval
         // 4
-        let changeInHeight = (CGRectGetHeight(keyboardFrame) + 50) * (show ? 1 : -1)
+        let changeInHeight = (CGRectGetHeight(keyboardFrame) + 0) * (show ? 1 : -1)
         //5
         UIView.animateWithDuration(animationDurarion, animations: { () -> Void in
             self.bottomConstraint.constant += changeInHeight
