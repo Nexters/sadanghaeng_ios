@@ -13,12 +13,15 @@ enum UserRouter: URLRequestConvertible {
     static let baseURLString = Resource.baseURLString
     static var OAuthToken: String?
     
+    case LoginUser([String: AnyObject])
     case CreateUser([String: AnyObject])
     case ReadUser(String)
     case UpdateUser(String, [String: AnyObject])
     
     var method: Alamofire.Method {
         switch self {
+        case .LoginUser:
+            return .POST
         case .CreateUser:
             return .POST
         case .ReadUser:
@@ -30,8 +33,10 @@ enum UserRouter: URLRequestConvertible {
     
     var path: String {
         switch self {
+        case .LoginUser:
+            return "/api/v1/users/login"
         case .CreateUser:
-            return "/api/v1/users"
+            return "/api/v1/users/register"
         case .ReadUser(let userId):
             return "/api/v1/users/\(userId)"
         case .UpdateUser(let userId, _):
@@ -44,11 +49,9 @@ enum UserRouter: URLRequestConvertible {
         let mutableURLRequest = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(path))
         mutableURLRequest.HTTPMethod = method.rawValue
         
-        //        if let token = PostRouter.OAuthToken {
-        //            mutableURLRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        //        }
-        
         switch self {
+        case .LoginUser(let parameters):
+            return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: parameters).0
         case .CreateUser(let parameters):
             return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: parameters).0
         case .UpdateUser(_, let parameters):
