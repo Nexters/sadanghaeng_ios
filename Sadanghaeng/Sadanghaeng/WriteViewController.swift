@@ -34,7 +34,7 @@ class WriteViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         // custom navigation bar
         
-        self.navigationController!.navigationBar.barTintColor = UIColor(red: 206/255, green: 240/255, blue: 235/255, alpha: 1)
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
     }
     override func viewDidAppear(animated: Bool) {
         let nav = self.navigationController?.navigationBar
@@ -45,7 +45,7 @@ class WriteViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = img
         self.navigationController?.navigationBar.setBackgroundImage(img, forBarMetrics: UIBarMetrics.Default)
         
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 206/255, green: 240/255, blue: 235/255, alpha: 1)
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
     }
     
     

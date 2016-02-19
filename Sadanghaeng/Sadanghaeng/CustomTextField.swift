@@ -26,6 +26,7 @@ class CustomCommentField: UITextField {
         self.layer.borderColor = UIColor(red: 252/255, green: 86/255, blue: 80/255, alpha: 1).CGColor
         self.layer.borderWidth = CGFloat(Float(1.0));
         self.layer.cornerRadius = 5
+        self.attributedPlaceholder = NSAttributedString(string: "댓글을 입력해주세요.", attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
         
     }
 }

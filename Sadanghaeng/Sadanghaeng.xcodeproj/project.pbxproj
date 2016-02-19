@@ -10,6 +10,7 @@
 		960791CD1C717FE700B8D15F /* SearchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960791CC1C717FE700B8D15F /* SearchBarController.swift */; };
 		960791CF1C71B80C00B8D15F /* SeachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960791CE1C71B80C00B8D15F /* SeachView.swift */; };
 		960791D11C71B85900B8D15F /* Candy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960791D01C71B85900B8D15F /* Candy.swift */; };
+		961ECF101C75B41D0082810D /* KeyboardContraintController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961ECF0F1C75B41D0082810D /* KeyboardContraintController.swift */; };
 		964144981C6D759800DC07C0 /* AutoKeyboardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964144971C6D759800DC07C0 /* AutoKeyboardScrollView.swift */; };
 		964444881C6082C100539761 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964444861C6082C100539761 /* Main.storyboard */; };
 		965768711C5B2CF9007DA828 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965768701C5B2CF9007DA828 /* CustomTextField.swift */; };
@@ -59,6 +60,7 @@
 		960791CC1C717FE700B8D15F /* SearchBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarController.swift; sourceTree = "<group>"; };
 		960791CE1C71B80C00B8D15F /* SeachView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeachView.swift; sourceTree = "<group>"; };
 		960791D01C71B85900B8D15F /* Candy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candy.swift; sourceTree = "<group>"; };
+		961ECF0F1C75B41D0082810D /* KeyboardContraintController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardContraintController.swift; path = ../KeyboardContraintController.swift; sourceTree = "<group>"; };
 		964144971C6D759800DC07C0 /* AutoKeyboardScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoKeyboardScrollView.swift; sourceTree = "<group>"; };
 		964444871C6082C100539761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		965768701C5B2CF9007DA828 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				97368C8E1C54AF6400B05A0F /* ViewController.swift */,
 				97368C8C1C54AF6400B05A0F /* AppDelegate.swift */,
 				964444861C6082C100539761 /* Main.storyboard */,
+				961ECF0F1C75B41D0082810D /* KeyboardContraintController.swift */,
 				960791CE1C71B80C00B8D15F /* SeachView.swift */,
 				960791D01C71B85900B8D15F /* Candy.swift */,
 				97368C951C54AF6400B05A0F /* LaunchScreen.storyboard */,
@@ -468,6 +471,7 @@
 				960791CD1C717FE700B8D15F /* SearchBarController.swift in Sources */,
 				9671B4581C632487000FBC13 /* SegmentedViewController.swift in Sources */,
 				965768791C5B51F4007DA828 /* CustomView.swift in Sources */,
+				961ECF101C75B41D0082810D /* KeyboardContraintController.swift in Sources */,
 				96F719A81C62E2C20008E1A6 /* Board.swift in Sources */,
 				965768771C5B519C007DA828 /* VerifyViewController.swift in Sources */,
 				97368C8D1C54AF6400B05A0F /* AppDelegate.swift in Sources */,
