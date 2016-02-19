@@ -8,11 +8,13 @@
 
 import UIKit
 
-class WriteViewController: UIViewController {
+class WriteViewController: UIViewController,UITextViewDelegate {
+    
+    let myPlaceholder = "글 내용을 입력해주세요."
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var myTextField: UITextView!
     @IBOutlet weak var postButton: UIBarButtonItem!
-
+    
     // 로그로 내용 확인
     
     @IBAction func postButtonTapped(sender: UIBarButtonItem) {
@@ -27,8 +29,25 @@ class WriteViewController: UIViewController {
         super.viewDidLoad()
         
         // 다른 곳 탭하면 키보드 숨기기
-    let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        
+        myTextField.delegate = self
+        myTextField.text = myPlaceholder
+        myTextField.textColor = UIColor.lightGrayColor()
+    }
+    func textViewDidBeginEditing(textView: UITextView) {
+        if textView.textColor == UIColor.lightGrayColor() {
+            textView.text = nil
+            textView.textColor = UIColor.blackColor()
+        }
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = myPlaceholder
+            textView.textColor = UIColor.lightGrayColor()
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -55,7 +74,7 @@ class WriteViewController: UIViewController {
     }
     
     
-
+    
     
 }
 

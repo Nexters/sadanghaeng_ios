@@ -10,6 +10,7 @@ import UIKit
 
 class KeyboardContraintController: UIViewController {
     
+    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
         override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,22 @@ class KeyboardContraintController: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name:
             UIKeyboardWillHideNotification, object: nil)
-        
+            
+        /////
+        textView.text = "다가서지 못하고 헤매이고 있어\n좋아하지만 다른 곳을 보고 있어\n가까워지려고 하면 할수록\n멀어져 가는 우리 둘의 마음처럼\n\n만나지 못해 맴돌고 있어\n우린 마치 평행선처럼\n말도 안 돼 우린 반드시 만날 거야\n기다릴게 언제까지나"
+        textView.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 14)
+        let fixedWidth = textView.frame.size.width
+        let newSize = textView.sizeThatFits(CGSizeMake(fixedWidth,CGFloat.max))
+        var newFrame = textView.frame
+        newFrame.size = CGSizeMake(max(newSize.width,fixedWidth), newSize.height)
+        textView.frame = newFrame
+    }
+    override func viewDidLayoutSubviews() {
+        let fixedWidth = textView.frame.size.width
+        let newSize = textView.sizeThatFits(CGSizeMake(fixedWidth, CGFloat.max))
+        var newFrame = textView.frame
+        newFrame.size = CGSizeMake(max(newSize.width, fixedWidth), newSize.height)
+        textView.frame = newFrame
     }
 
     
