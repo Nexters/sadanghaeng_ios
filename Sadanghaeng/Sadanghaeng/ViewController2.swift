@@ -4,6 +4,7 @@ import UIKit
 class ViewController2: UIViewController,UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var tableHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -11,13 +12,13 @@ class ViewController2: UIViewController,UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var commentTableView: UITableView!
     
-    let comments:[String] = ["언젠가는 못다한 말을 전할거야","시간을 달려서 어른이 될 수만 있다면"]
-    
+    let comments:[String] = ["언젠가는 못다한 말을 전할거야 후헤헹후우후에헤우훟에ㅜ후웋우헹후우헤에헹헤에헤에헤에헤엫에헤에헤ㅔ에헤에헹","시간을 달려서 어른이 될 수만 있다면","머냥","나를 사랑하지 않는 너를 잊은 채\n하고 싶었던 모든걸 하고 살아도\n머릿속에 넌 절대 지워지지가 않아.","하나 더 쓸꺼야","1등 할꼬야"]
+    let numberOfRow: Int = 6
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let titleText = "시간을 달려서~~~~😳"
-        let nameText = "가린ㅇㅇㅇ"
+        let nameText = "가린이개가을이"
         let contentText = "다가서지 못하고 헤매이고 있어\n좋아하지만 다른 곳을 보고 있어\n가까워지려고 하면 할수록\n멀어져 가는 우리 둘의 마음처럼\n만나지 못해 맴돌고 있어\n우린 마치 평행선처럼\n말도 안 돼 우린 반드시 만날 거야\n기다릴게 언제까지나"
         
         self.titleLabel.text = titleText
@@ -27,9 +28,12 @@ class ViewController2: UIViewController,UITableViewDataSource, UITableViewDelega
         // 테이블 row가 아닌건 안보이게
         let tableViewFooter = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 10))
         tableViewFooter.backgroundColor = UIColor.clearColor()
-        commentTableView.tableFooterView = tableViewFooter
-        commentTableView.scrollEnabled = false
-        
+        self.commentTableView.tableFooterView = tableViewFooter
+        self.commentTableView.scrollEnabled = false
+        self.tableHeightConstraint.constant = CGFloat(numberOfRow) * 44
+        self.view.layoutIfNeeded()
+
+        //키보드 조정
         let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         
@@ -37,6 +41,31 @@ class ViewController2: UIViewController,UITableViewDataSource, UITableViewDelega
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name:
             UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        commentTableView.reloadData()
+        let nav = self.navigationController?.navigationBar
+        nav?.translucent = false
+        
+        let img = UIImage()
+        // Remove Shadow
+        self.navigationController?.navigationBar.shadowImage = img
+        self.navigationController?.navigationBar.setBackgroundImage(img, forBarMetrics: UIBarMetrics.Default)
+        
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 253/255, green: 64/255, blue: 55/255, alpha: 1)
+        
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     // 키보드 조정
     func keyboardWillShow(notification:NSNotification) {
@@ -63,7 +92,15 @@ class ViewController2: UIViewController,UITableViewDataSource, UITableViewDelega
         })
         
     }
-    
+    // 네비게이션 색 변경
+    override func viewWillAppear(animated: Bool) {
+        // custom navigation bar
+        
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 253/255, green: 64/255, blue: 55/255, alpha: 1)
+    }
     override func viewWillDisappear(animated: Bool) {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)

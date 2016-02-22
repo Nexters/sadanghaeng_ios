@@ -44,6 +44,22 @@ class SegmentedViewController: UIViewController, UITableViewDataSource, UITableV
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    override func viewDidAppear(animated: Bool) {
+        let nav = self.navigationController?.navigationBar
+        nav?.translucent = false
+        
+        let img = UIImage()
+        // Remove Shadow
+        self.navigationController?.navigationBar.shadowImage = img
+        self.navigationController?.navigationBar.setBackgroundImage(img, forBarMetrics: UIBarMetrics.Default)
+        // navigation Bar Color
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blackColor()]
+        self.navigationController?.navigationBar.tintColor = UIColor.redColor()
+        UIBarButtonItem.appearance().tintColor = UIColor.redColor()
+
+    }
     override func viewWillAppear(animated: Bool) {
         let nav = self.navigationController?.navigationBar
         nav?.translucent = false
@@ -54,7 +70,12 @@ class SegmentedViewController: UIViewController, UITableViewDataSource, UITableV
         self.navigationController?.navigationBar.setBackgroundImage(img, forBarMetrics: UIBarMetrics.Default)
         // navigation Bar Color
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blackColor()]
+        self.navigationController?.navigationBar.tintColor = UIColor.redColor()
+        UIBarButtonItem.appearance().tintColor = UIColor.redColor()
     }
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var returnValue = 0

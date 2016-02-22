@@ -21,6 +21,8 @@
 		9671B45B1C632AD5000FBC13 /* SegTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671B45A1C632AD5000FBC13 /* SegTableViewCell.swift */; };
 		9671B45D1C6337C5000FBC13 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671B45C1C6337C5000FBC13 /* CommentViewController.swift */; };
 		9671B4601C63386B000FBC13 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671B45F1C63386B000FBC13 /* CommentTableViewCell.swift */; };
+		96794C0A1C7AB60300E7B082 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96794C091C7AB60300E7B082 /* RegisterViewController.swift */; };
+		96794C0C1C7AE7E900E7B082 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96794C0B1C7AE7E900E7B082 /* SearchViewController.swift */; };
 		969B3D1C1C6C6A5300183570 /* DrawLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B3D1B1C6C6A5300183570 /* DrawLine.swift */; };
 		96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */; };
 		96F719A81C62E2C20008E1A6 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F719A51C62E2C20008E1A6 /* Board.swift */; };
@@ -70,6 +72,8 @@
 		9671B45A1C632AD5000FBC13 /* SegTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegTableViewCell.swift; sourceTree = "<group>"; };
 		9671B45C1C6337C5000FBC13 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		9671B45F1C63386B000FBC13 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		96794C091C7AB60300E7B082 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		96794C0B1C7AE7E900E7B082 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		969B3D1B1C6C6A5300183570 /* DrawLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawLine.swift; sourceTree = "<group>"; };
 		96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		96F719A51C62E2C20008E1A6 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 		969BD6291C77E949005DA7BB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				96794C0B1C7AE7E900E7B082 /* SearchViewController.swift */,
+				96794C091C7AB60300E7B082 /* RegisterViewController.swift */,
 				9648475C1C783F7100481A57 /* ViewController2.swift */,
 				965768761C5B519C007DA828 /* VerifyViewController.swift */,
 				97368C8E1C54AF6400B05A0F /* ViewController.swift */,
@@ -480,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				966032B01C5EFC12009B69C2 /* CustomUIButton.swift in Sources */,
+				96794C0A1C7AB60300E7B082 /* RegisterViewController.swift in Sources */,
 				964144981C6D759800DC07C0 /* AutoKeyboardScrollView.swift in Sources */,
 				969B3D1C1C6C6A5300183570 /* DrawLine.swift in Sources */,
 				97368C8F1C54AF6400B05A0F /* ViewController.swift in Sources */,
@@ -491,6 +498,7 @@
 				96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */,
 				9671B4581C632487000FBC13 /* SegmentedViewController.swift in Sources */,
 				965768791C5B51F4007DA828 /* CustomView.swift in Sources */,
+				96794C0C1C7AE7E900E7B082 /* SearchViewController.swift in Sources */,
 				96F719A81C62E2C20008E1A6 /* Board.swift in Sources */,
 				965768771C5B519C007DA828 /* VerifyViewController.swift in Sources */,
 				9648475D1C783F7100481A57 /* ViewController2.swift in Sources */,
