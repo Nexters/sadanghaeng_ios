@@ -10,13 +10,16 @@ import UIKit
 
 class MyUserViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
     
+    @IBOutlet weak var myTableView: UITableView!
+    
+    let select:[String] = ["내가 쓴 글","내가 쓴 댓글"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
-        
-        
+        myTableView.dataSource = self
     }
     
     func dismissKeyboard() {
@@ -24,15 +27,15 @@ class MyUserViewController: UIViewController , UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+       let returnValue = select.count
+        return returnValue
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let myCell:UITableViewCell = myTableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        myCell.textLabel?.text = select[indexPath.row]
+        return myCell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-    }
     
 }

@@ -21,6 +21,7 @@
 		9671B45B1C632AD5000FBC13 /* SegTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671B45A1C632AD5000FBC13 /* SegTableViewCell.swift */; };
 		9671B45D1C6337C5000FBC13 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671B45C1C6337C5000FBC13 /* CommentViewController.swift */; };
 		9671B4601C63386B000FBC13 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671B45F1C63386B000FBC13 /* CommentTableViewCell.swift */; };
+		96794C081C7A98B500E7B082 /* UserSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96794C071C7A98B500E7B082 /* UserSelect.swift */; };
 		969B3D1C1C6C6A5300183570 /* DrawLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B3D1B1C6C6A5300183570 /* DrawLine.swift */; };
 		96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */; };
 		96F719A81C62E2C20008E1A6 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F719A51C62E2C20008E1A6 /* Board.swift */; };
@@ -70,6 +71,7 @@
 		9671B45A1C632AD5000FBC13 /* SegTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegTableViewCell.swift; sourceTree = "<group>"; };
 		9671B45C1C6337C5000FBC13 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		9671B45F1C63386B000FBC13 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		96794C071C7A98B500E7B082 /* UserSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSelect.swift; sourceTree = "<group>"; };
 		969B3D1B1C6C6A5300183570 /* DrawLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawLine.swift; sourceTree = "<group>"; };
 		96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		96F719A51C62E2C20008E1A6 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				9658D6071C6CAD2500D601E9 /* MyUserViewController.swift */,
+				96794C071C7A98B500E7B082 /* UserSelect.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				960791CF1C71B80C00B8D15F /* SeachView.swift in Sources */,
 				976B58E31C5E1CB5002D6069 /* PostRouter.swift in Sources */,
 				9671B4601C63386B000FBC13 /* CommentTableViewCell.swift in Sources */,
+				96794C081C7A98B500E7B082 /* UserSelect.swift in Sources */,
 				9671B45B1C632AD5000FBC13 /* SegTableViewCell.swift in Sources */,
 				96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */,
 				9671B4581C632487000FBC13 /* SegmentedViewController.swift in Sources */,
