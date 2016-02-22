@@ -20,6 +20,12 @@ class MyUserViewController: UIViewController , UITableViewDelegate, UITableViewD
         let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         myTableView.dataSource = self
+        
+        // 테이블 row가 아닌건 안보이게
+        let tableViewFooter = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 10))
+        tableViewFooter.backgroundColor = UIColor.clearColor()
+        myTableView.tableFooterView = tableViewFooter
+        myTableView.scrollEnabled = false
     }
     
     func dismissKeyboard() {
