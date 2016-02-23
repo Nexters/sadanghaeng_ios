@@ -6,14 +6,19 @@ class ViewController2: UIViewController,UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var dislikeButton: UIButton!
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     
     @IBOutlet weak var commentTableView: UITableView!
     
-    let comments:[String] = ["언젠가는 못다한 말을 전할거야 후헤헹후우후에헤우훟에ㅜ후웋우헹후우헤에헹헤에헤에헤에헤엫에헤에헤ㅔ에헤에헹","시간을 달려서 어른이 될 수만 있다면","머냥","나를 사랑하지 않는 너를 잊은 채\n하고 싶었던 모든걸 하고 살아도\n머릿속에 넌 절대 지워지지가 않아.","하나 더 쓸꺼야","1등 할꼬야"]
-    let numberOfRow: Int = 6
+    var isSelected:Bool = false
+    
+    let comments:[String] = ["언젠가는 못다한 말을 전할거야","시간을 달려서 어른이 될 수만 있다면","머냥","밀크티 맛있당ㅎㅎㅎㅎ","하나 더 쓸꺼야","1등 할꼬야","갸악","ㅜㅜㅜㅜ\n왜 안돼"]
+    let numberOfRow: Int = 8
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,9 +34,8 @@ class ViewController2: UIViewController,UITableViewDataSource, UITableViewDelega
         let tableViewFooter = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 10))
         tableViewFooter.backgroundColor = UIColor.clearColor()
         self.commentTableView.tableFooterView = tableViewFooter
-        self.commentTableView.scrollEnabled = false
-        self.tableHeightConstraint.constant = CGFloat(numberOfRow) * 44
-        self.view.layoutIfNeeded()
+        self.tableHeightConstraint.constant = CGFloat(numberOfRow) * 60
+        //self.view.layoutIfNeeded()
 
         //키보드 조정
         let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
@@ -158,5 +162,35 @@ class ViewController2: UIViewController,UITableViewDataSource, UITableViewDelega
         cell.comment.text = comments[indexPath.row]
         return cell
     }
+    
+    //버튼 액션 - 글 좋아요
+    @IBAction func likeButtonTapped(sender: UIButton) {
+        
+        if isSelected == false {
+            sender.setImage(UIImage(named: "like_pressed.png"), forState: UIControlState.Normal)
+            dislikeButton.setImage(UIImage(named: "dislike_normal.png"), forState: UIControlState.Normal)
+            isSelected = true
+        } else {
+            sender.setImage(UIImage(named: "like_normal.png"), forState: UIControlState.Normal)
+            //dislikeButton.setImage(UIImage(named: "dislike_pressed.png"), forState: UIControlState.Normal)
+            isSelected = false
+        }
+        
+        
+    }
+    
+    @IBAction func dislikeButtonTapped(sender: UIButton) {
+        if isSelected == false {
+            sender.setImage(UIImage(named: "dislike_pressed.png"), forState: UIControlState.Normal)
+            likeButton.setImage(UIImage(named: "like_normal.png"), forState: UIControlState.Normal)
+            isSelected = true
+        } else {
+            sender.setImage(UIImage(named: "dislike_normal.png"), forState: UIControlState.Normal)
+            isSelected = false
+        }
+    }
+    
+    
+    
     
 }

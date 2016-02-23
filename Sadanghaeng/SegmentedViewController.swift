@@ -37,8 +37,15 @@ class SegmentedViewController: UIViewController, UITableViewDataSource, UITableV
         
         //let photo3 = UIImage(named: "meal3")!
         let list3 = Board(name: "밥줘라 밥", nickname: "가으리멍멍")!
+        let list4 = Board(name: "아 왜 안돼", nickname: "ㅁ")!
+        let list5 = Board(name: "스크롤 생겨라", nickname: "ㅎ")!
+
+        let list6 = Board(name: "뀽아앙", nickname: "ㅇㅇㅇ")!
+
+        let list7 = Board(name: "졸려", nickname: "ww")!
+
         
-        lists += [list1, list2, list3]
+        lists += [list1, list2, list3, list4,list5,list6,list7]
     }
     
     override func didReceiveMemoryWarning() {
