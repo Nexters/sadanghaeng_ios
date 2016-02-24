@@ -2,43 +2,55 @@
 //  RegisterViewController.swift
 //  Sadanghaeng
 //
-//  Created by garin on 2016. 2. 22..
+//  Created by garin on 2016. 2. 24..
 //  Copyright © 2016년 Sadanghaeng. All rights reserved.
 //
 
 import UIKit
 
 class RegisterViewController: UIViewController {
+    
+    @IBOutlet weak var emailInputField: UITextField!
+    @IBOutlet weak var pwInputField: UITextField!
+    @IBOutlet weak var pwConfirmField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    @IBAction func registerButtonTapped(sender: AnyObject) {
+        //네비게이션바 투명
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(),forBarMetrics: .Default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.translucent = true
         
-        let alert = UIAlertController(title: "이메일 발송 완료", message: "인증하신 이메일을 확인해 주세요!", preferredStyle: UIAlertControllerStyle.Alert)
+        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
         
-        alert.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Default, handler: nil))
-        
-        self.presentViewController(alert, animated:true, completion:nil)
-        
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        let nav = self.navigationController?.navigationBar
-        nav?.translucent = false
-        
-        let img = UIImage()
-        // Remove Shadow
-        self.navigationController?.navigationBar.shadowImage = img
-        self.navigationController?.navigationBar.setBackgroundImage(img, forBarMetrics: UIBarMetrics.Default)
-        
-        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
-        self.navigationController!.navigationBar.barTintColor = UIColor(red: 253/255, green: 64/255, blue: 55/255, alpha: 1)
     }
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
+    @IBAction func registerButtonTapped(sender: UIButton) {
+        if (emailInputField.text == "" || pwInputField.text == "" || pwConfirmField.text == "") {
+            let alert = UIAlertController(title: "빠짐없이 입력해주세요!", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Cancel, handler: nil))
+            
+            self.presentViewController(alert, animated:true, completion:nil)
+            return;
+        } else {
+            
+            let alert = UIAlertController(title: "이메일 발송 완료!", message: "이메일을 확인해주세요", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let okAction: UIAlertAction = UIAlertAction(title: "확인", style: .Default) { action -> Void in
+                            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let vc:UINavigationController = storyboard.instantiateViewControllerWithIdentifier("startControllerSegue") as! UINavigationController
+                            self.presentViewController(vc, animated: true, completion: nil)
+            }
+            alert.addAction(okAction)
+            self.presentViewController(alert, animated:true, completion:nil)
+        }
+    }
+    
 }

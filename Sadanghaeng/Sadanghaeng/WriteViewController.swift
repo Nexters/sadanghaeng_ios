@@ -17,11 +17,29 @@ class WriteViewController: UIViewController,UITextViewDelegate {
     
     // 로그로 내용 확인
     
+//    @IBAction func postButtonTapped(sender: UIButton) {
+//
+//    }
     @IBAction func postButtonTapped(sender: UIBarButtonItem) {
-        let title = titleField.text!
-        let text = myTextField.text
-        print("Title: \(title)")
-        print("Text: \(text)")
+        if (titleField.text == "" || myTextField.text == ""){
+            let nullalert = UIAlertController(title: "제목을 입력해주세여~", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+            nullalert.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Cancel, handler: nil))
+            self.presentViewController(nullalert, animated:true, completion:nil)
+            return;
+           
+        }else {
+//            let alert = UIAlertController(title: "등록 완료", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+//            
+//            alert.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Default, handler: nil))
+//            
+//            self.presentViewController(alert, animated:true, completion:nil)
+//            
+//            self.performSegueWithIdentifier("postToListSegue", sender: self)
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc:UINavigationController = storyboard.instantiateViewControllerWithIdentifier("boardListViewController") as! UINavigationController
+            self.presentViewController(vc, animated: true, completion: nil)
+            print("등록!")
+        }
     }
     
     
@@ -78,7 +96,7 @@ class WriteViewController: UIViewController,UITextViewDelegate {
     func dismissKeyboard() {
         view.endEditing(true)
     }
-    
+
     
     
     

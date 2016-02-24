@@ -16,6 +16,17 @@ class CustomUIButton: UIButton {
     }
 }
 
+class CustomRegisterButton: UIButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.layer.cornerRadius = 5
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.whiteColor().CGColor
+        
+    }
+}
+
+
 class CustomInputButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

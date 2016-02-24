@@ -11,22 +11,12 @@ import UIKit
 class MyUserViewController: UIViewController {
     
     @IBOutlet weak var editTextField: CustomTextField!
-//    @IBOutlet weak var myTableView: UITableView!
-//    
-//    let select:[String] = ["내가 쓴 글","내가 쓴 댓글"]
-//    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
-//        myTableView.dataSource = self
-//        
-//        // 테이블 row가 아닌건 안보이게
-//        let tableViewFooter = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 10))
-//        tableViewFooter.backgroundColor = UIColor.clearColor()
-//        myTableView.tableFooterView = tableViewFooter
-//        myTableView.scrollEnabled = false
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -56,18 +46,6 @@ class MyUserViewController: UIViewController {
     func dismissKeyboard() {
         view.endEditing(true)
     }
-//    
-//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//       let returnValue = select.count
-//        return returnValue
-//    }
-//    
-//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        let myCell:UITableViewCell = myTableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
-//        myCell.textLabel?.text = select[indexPath.row]
-//        return myCell
-//    }
-    
     
     @IBAction func EditButtonTapped(sender: AnyObject) {
         
@@ -85,8 +63,30 @@ class MyUserViewController: UIViewController {
             
             self.presentViewController(alert, animated:true, completion:nil)
         }
-
-        
     }
+    
+    @IBAction func logOutButtonTapped(sender: UIButton) {
+        //Create the AlertController
+        let actionSheetController: UIAlertController = UIAlertController(title: "로그아웃", message: "정말 로그아웃 하실건가요?ㅠㅠ", preferredStyle: .Alert)
+        
+        //Create and add the Cancel action
+        let cancelAction: UIAlertAction = UIAlertAction(title: "아니오", style: .Cancel) { action -> Void in
+            //Do some stuff
+        }
+        actionSheetController.addAction(cancelAction)
+        //Create and an option action
+        let nextAction: UIAlertAction = UIAlertAction(title: "네", style: .Default) { action -> Void in
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc:UINavigationController = storyboard.instantiateViewControllerWithIdentifier("startControllerSegue") as! UINavigationController
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+        actionSheetController.addAction(nextAction)
+        //Add a text field
+        
+        //Present the AlertController
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+
+    }
+    
     
 }

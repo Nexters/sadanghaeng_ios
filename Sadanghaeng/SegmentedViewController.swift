@@ -28,8 +28,8 @@ class SegmentedViewController: UIViewController, UITableViewDataSource, UITableV
         myTableView.tableFooterView = tableViewFooter
         
         // 플로팅 버튼 쉐도우 추가
-        postButton.layer.shadowOpacity = 0.7
-        postButton.layer.shadowOffset = CGSize(width: 3.0, height: 2.0)
+        postButton.layer.shadowOpacity = 0.5
+        postButton.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
         postButton.layer.shadowRadius = 5.0
     }
     
@@ -83,7 +83,7 @@ class SegmentedViewController: UIViewController, UITableViewDataSource, UITableV
         // navigation Bar Color
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         
-        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blackColor()]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.blackColor()]
         self.navigationController?.navigationBar.tintColor = UIColor.redColor()
         UIBarButtonItem.appearance().tintColor = UIColor.redColor()
     }

@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		960791CF1C71B80C00B8D15F /* SeachView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960791CE1C71B80C00B8D15F /* SeachView.swift */; };
 		960791D11C71B85900B8D15F /* Candy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960791D01C71B85900B8D15F /* Candy.swift */; };
+		96215BAE1C7D8E6D0017A415 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96215BAD1C7D8E6D0017A415 /* RegisterViewController.swift */; };
 		964144981C6D759800DC07C0 /* AutoKeyboardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964144971C6D759800DC07C0 /* AutoKeyboardScrollView.swift */; };
 		964444881C6082C100539761 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 964444861C6082C100539761 /* Main.storyboard */; };
 		9648475D1C783F7100481A57 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648475C1C783F7100481A57 /* ViewController2.swift */; };
 		965768711C5B2CF9007DA828 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965768701C5B2CF9007DA828 /* CustomTextField.swift */; };
-		965768771C5B519C007DA828 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965768761C5B519C007DA828 /* VerifyViewController.swift */; };
+		965768771C5B519C007DA828 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965768761C5B519C007DA828 /* LoginViewController.swift */; };
 		965768791C5B51F4007DA828 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965768781C5B51F4007DA828 /* CustomView.swift */; };
 		9658D6081C6CAD2500D601E9 /* MyUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658D6071C6CAD2500D601E9 /* MyUserViewController.swift */; };
 		966032B01C5EFC12009B69C2 /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966032AF1C5EFC12009B69C2 /* CustomUIButton.swift */; };
@@ -21,7 +22,6 @@
 		9671B45B1C632AD5000FBC13 /* SegTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671B45A1C632AD5000FBC13 /* SegTableViewCell.swift */; };
 		9671B45D1C6337C5000FBC13 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671B45C1C6337C5000FBC13 /* CommentViewController.swift */; };
 		9671B4601C63386B000FBC13 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9671B45F1C63386B000FBC13 /* CommentTableViewCell.swift */; };
-		96794C0A1C7AB60300E7B082 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96794C091C7AB60300E7B082 /* RegisterViewController.swift */; };
 		96794C0C1C7AE7E900E7B082 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96794C0B1C7AE7E900E7B082 /* SearchViewController.swift */; };
 		969B3D1C1C6C6A5300183570 /* DrawLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B3D1B1C6C6A5300183570 /* DrawLine.swift */; };
 		96B7EF6D1C5AF96200043BE7 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */; };
@@ -60,11 +60,12 @@
 		40C4A4CA7613DB8B47849AB4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		960791CE1C71B80C00B8D15F /* SeachView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeachView.swift; sourceTree = "<group>"; };
 		960791D01C71B85900B8D15F /* Candy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Candy.swift; sourceTree = "<group>"; };
+		96215BAD1C7D8E6D0017A415 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		964144971C6D759800DC07C0 /* AutoKeyboardScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoKeyboardScrollView.swift; sourceTree = "<group>"; };
 		964444871C6082C100539761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9648475C1C783F7100481A57 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		965768701C5B2CF9007DA828 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		965768761C5B519C007DA828 /* VerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		965768761C5B519C007DA828 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		965768781C5B51F4007DA828 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		9658D6071C6CAD2500D601E9 /* MyUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUserViewController.swift; sourceTree = "<group>"; };
 		966032AF1C5EFC12009B69C2 /* CustomUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		9671B45A1C632AD5000FBC13 /* SegTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegTableViewCell.swift; sourceTree = "<group>"; };
 		9671B45C1C6337C5000FBC13 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		9671B45F1C63386B000FBC13 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
-		96794C091C7AB60300E7B082 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		96794C0B1C7AE7E900E7B082 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		969B3D1B1C6C6A5300183570 /* DrawLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawLine.swift; sourceTree = "<group>"; };
 		96B7EF6C1C5AF96200043BE7 /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
@@ -192,10 +192,10 @@
 		969BD6291C77E949005DA7BB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				96215BAD1C7D8E6D0017A415 /* RegisterViewController.swift */,
 				96794C0B1C7AE7E900E7B082 /* SearchViewController.swift */,
-				96794C091C7AB60300E7B082 /* RegisterViewController.swift */,
 				9648475C1C783F7100481A57 /* ViewController2.swift */,
-				965768761C5B519C007DA828 /* VerifyViewController.swift */,
+				965768761C5B519C007DA828 /* LoginViewController.swift */,
 				97368C8E1C54AF6400B05A0F /* ViewController.swift */,
 				960791CE1C71B80C00B8D15F /* SeachView.swift */,
 				9658D6061C6CACFA00D601E9 /* User */,
@@ -486,7 +486,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				966032B01C5EFC12009B69C2 /* CustomUIButton.swift in Sources */,
-				96794C0A1C7AB60300E7B082 /* RegisterViewController.swift in Sources */,
 				964144981C6D759800DC07C0 /* AutoKeyboardScrollView.swift in Sources */,
 				969B3D1C1C6C6A5300183570 /* DrawLine.swift in Sources */,
 				97368C8F1C54AF6400B05A0F /* ViewController.swift in Sources */,
@@ -500,7 +499,8 @@
 				965768791C5B51F4007DA828 /* CustomView.swift in Sources */,
 				96794C0C1C7AE7E900E7B082 /* SearchViewController.swift in Sources */,
 				96F719A81C62E2C20008E1A6 /* Board.swift in Sources */,
-				965768771C5B519C007DA828 /* VerifyViewController.swift in Sources */,
+				96215BAE1C7D8E6D0017A415 /* RegisterViewController.swift in Sources */,
+				965768771C5B519C007DA828 /* LoginViewController.swift in Sources */,
 				9648475D1C783F7100481A57 /* ViewController2.swift in Sources */,
 				97368C8D1C54AF6400B05A0F /* AppDelegate.swift in Sources */,
 				960791D11C71B85900B8D15F /* Candy.swift in Sources */,
