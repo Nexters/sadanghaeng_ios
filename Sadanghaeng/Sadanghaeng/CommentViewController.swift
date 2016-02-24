@@ -103,7 +103,7 @@ class CommentViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     @IBAction func ActionSheetButtonTapped(sender: AnyObject) {
-        var myActionSheet = UIAlertController(title: "이 게시물에 대한 기능", message: "뭐 할까요?", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let myActionSheet = UIAlertController(title: "이 게시물에 대한 기능", message: "뭐 할까요?", preferredStyle: UIAlertControllerStyle.ActionSheet)
         
         let edit = UIAlertAction(title: "수정", style: .Default) { (Alert:UIAlertAction) -> Void in
             print("edit tapped")

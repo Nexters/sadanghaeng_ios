@@ -13,6 +13,7 @@ class SegmentedViewController: UIViewController, UITableViewDataSource, UITableV
 
     @IBOutlet weak var mySegmentedControl: UISegmentedControl!
     @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var postButton: UIButton!
     
     var lists = [Board]()
     
@@ -22,10 +23,14 @@ class SegmentedViewController: UIViewController, UITableViewDataSource, UITableV
         // Load the sample data.
         loadSampleLists()
         // 테이블 row가 아닌건 안보이게
-        var tableViewFooter = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 10))
+        let tableViewFooter = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 10))
         tableViewFooter.backgroundColor = UIColor.clearColor()
         myTableView.tableFooterView = tableViewFooter
         
+        // 플로팅 버튼 쉐도우 추가
+        postButton.layer.shadowOpacity = 0.7
+        postButton.layer.shadowOffset = CGSize(width: 3.0, height: 2.0)
+        postButton.layer.shadowRadius = 5.0
     }
     
     func loadSampleLists() {

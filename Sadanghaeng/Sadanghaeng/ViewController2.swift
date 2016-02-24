@@ -17,7 +17,7 @@ class ViewController2: UIViewController,UITableViewDataSource, UITableViewDelega
     
     var isSelected:Bool = false
     
-    let comments:[String] = ["언젠가는 못다한 말을 전할거야","시간을 달려서 어른이 될 수만 있다면","머냥","밀크티 맛있당ㅎㅎㅎㅎ","하나 더 쓸꺼야","1등 할꼬야","갸악","ㅜㅜㅜㅜ\n왜 안돼"]
+    let comments:[String] = ["언젠가는 못다한 말을 전할거야~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~","시간을 달려서 어른이 될 수만 있다면","머냥","밀크티 맛있당ㅎㅎㅎㅎ\n두줄두줄","하나 더 쓸꺼야","1등 할꼬야","갸악","ㅜㅜㅜㅜ\n왜 안돼"]
     let numberOfRow: Int = 8
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,7 +126,7 @@ class ViewController2: UIViewController,UITableViewDataSource, UITableViewDelega
     // 액션시트
     
     @IBAction func ActionSheetButtonTapped(sender: AnyObject) {
-        var myActionSheet = UIAlertController(title: "이 게시물에 대한 기능", message: "뭐 할까요?", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let myActionSheet = UIAlertController(title: "이 게시물에 대한 기능", message: "뭐 할까요?", preferredStyle: UIAlertControllerStyle.ActionSheet)
         
         let edit = UIAlertAction(title: "수정", style: .Default) { (Alert:UIAlertAction) -> Void in
             print("edit tapped")
