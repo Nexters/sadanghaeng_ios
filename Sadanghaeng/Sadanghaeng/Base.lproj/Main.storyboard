@@ -1952,12 +1952,18 @@
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="12"/>
                                                                     <color key="textColor" red="0.51764705882352935" green="0.51764705882352935" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                                        <rect key="frame" x="19" y="8" width="177" height="14.5"/>
+                                                                    </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="댓글을 입력 입력 입력 입력 입력" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SL-CB-5au">
                                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
+                                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                                        <rect key="frame" x="19" y="24" width="348" height="19.5"/>
+                                                                    </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3시간 전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4x-CK-yQs">
                                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -1974,6 +1980,9 @@
                                                                             <state key="normal" title="좋아요">
                                                                                 <color key="titleColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                             </state>
+                                                                            <connections>
+                                                                                <action selector="likeAction:" destination="VN5-dV-x7l" eventType="touchUpInside" id="ooo-Cs-hFm"/>
+                                                                            </connections>
                                                                         </button>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="like_normal" translatesAutoresizingMaskIntoConstraints="NO" id="pvT-cL-cxp">
                                                                             <rect key="frame" x="35" y="0.0" width="24" height="27"/>
@@ -1987,7 +1996,8 @@
                                                                                     <exclude reference="nBf-ER-4vQ"/>
                                                                                 </mask>
                                                                             </variation>
-                                                                            <variation key="widthClass=compact">
+                                                                            <variation key="widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="35" y="0.0" width="14" height="14"/>
                                                                                 <mask key="constraints">
                                                                                     <include reference="KAW-XV-CJQ"/>
                                                                                     <include reference="nBf-ER-4vQ"/>
@@ -1999,8 +2009,14 @@
                                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="12"/>
                                                                             <color key="textColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
+                                                                            <variation key="widthClass=compact" misplaced="YES">
+                                                                                <rect key="frame" x="52" y="0.0" width="21" height="14"/>
+                                                                            </variation>
                                                                         </label>
                                                                     </subviews>
+                                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                                        <rect key="frame" x="76" y="45" width="73" height="14"/>
+                                                                    </variation>
                                                                 </stackView>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
@@ -2074,6 +2090,7 @@
                                                         </tableViewCellContentView>
                                                         <connections>
                                                             <outlet property="comment" destination="0SL-CB-5au" id="ZH0-LT-PaO"/>
+                                                            <outlet property="commentLikeButton" destination="7aP-1f-N5b" id="ZwM-qg-mFX"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
@@ -2350,7 +2367,7 @@
                     <view key="view" contentMode="scaleToFill" id="H2g-f7-CTS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="0.80374461206896552" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>

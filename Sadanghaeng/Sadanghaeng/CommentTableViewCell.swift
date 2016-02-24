@@ -11,6 +11,7 @@ import UIKit
 class CommentTableViewCell: UITableViewCell {
     
     @IBOutlet weak var comment: UILabel!
+    @IBOutlet weak var commentLikeButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -160,7 +160,18 @@ class ViewController2: UIViewController,UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! CommentTableViewCell
         
         cell.comment.text = comments[indexPath.row]
+        cell.commentLikeButton.tag = indexPath.row
+        cell.commentLikeButton.addTarget(self, action: "likeAction", forControlEvents: .TouchUpInside)
         return cell
+    }
+    @IBAction func likeAction(sender: UIButton) {
+        let titleString = self.comments[sender.tag] as? String
+        
+        let firstActivityItem = "\(titleString!)"
+        
+        let activityViewController : UIActivityViewController = UIActivityViewController(activityItems: [firstActivityItem], applicationActivities: nil)
+        
+        self.presentViewController(activityViewController, animated: true, completion: nil)
     }
     
     //버튼 액션 - 글 좋아요
