@@ -13,7 +13,7 @@ enum UnivRouter: URLRequestConvertible {
     static let baseURLString = Resource.baseURLString
     static var OAuthToken: String?
     
-    case ReadUnivPosts([String: AnyObject])
+    case ReadUnivPosts(String, [String: AnyObject])
     
     var method: Alamofire.Method {
         switch self {
@@ -24,7 +24,7 @@ enum UnivRouter: URLRequestConvertible {
     
     var path: String {
         switch self {
-        case .ReadUnivPosts(let univId):
+        case .ReadUnivPosts(let univId, _):
             return "/api/v1/universities/\(univId)/posts"
         }
     }
@@ -35,7 +35,7 @@ enum UnivRouter: URLRequestConvertible {
         mutableURLRequest.HTTPMethod = method.rawValue
         
         switch self {
-        case .ReadUnivPosts(let parameters):
+        case .ReadUnivPosts(_, let parameters):
             return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: parameters).0
         default:
             return mutableURLRequest
