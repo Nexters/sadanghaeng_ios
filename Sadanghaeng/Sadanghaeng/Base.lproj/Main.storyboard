@@ -573,7 +573,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Esz-DM-1D9" userLabel="WrapperView">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Esz-DM-1D9" userLabel="WrapperView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="P0e-jr-PsX">
@@ -582,7 +582,7 @@
                                             <rect key="frame" x="0.0" y="-67" width="414" height="737"/>
                                         </variation>
                                     </imageView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ni-rt-898" userLabel="containerView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ni-rt-898" userLabel="containerView">
                                         <rect key="frame" x="50" y="63" width="275" height="521"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garim_small" translatesAutoresizingMaskIntoConstraints="NO" id="0xw-ka-5ly" userLabel="logo">
@@ -960,6 +960,9 @@
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="18" y="20" width="183" height="18"/>
+                                                    </variation>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="qXp-aQ-aXd">
                                                     <rect key="frame" x="-2" y="35" width="317" height="55"/>
@@ -1977,6 +1980,8 @@
                                         <exclude reference="8Db-4R-cfz"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <exclude reference="RHI-pH-Wn2"/>
+                                        <exclude reference="uAr-CU-BEW"/>
                                         <exclude reference="Foc-Ru-4Kg"/>
                                         <exclude reference="g5H-gw-nos"/>
                                         <exclude reference="gNh-dG-1no"/>
@@ -1985,8 +1990,6 @@
                                         <exclude reference="UsX-3v-Ft2"/>
                                         <exclude reference="nbT-7Y-DEs"/>
                                         <exclude reference="skA-n5-r6Z"/>
-                                        <exclude reference="RHI-pH-Wn2"/>
-                                        <exclude reference="uAr-CU-BEW"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
@@ -1994,6 +1997,8 @@
                                         <include reference="8Db-4R-cfz"/>
                                     </mask>
                                     <mask key="constraints">
+                                        <include reference="RHI-pH-Wn2"/>
+                                        <include reference="uAr-CU-BEW"/>
                                         <include reference="Foc-Ru-4Kg"/>
                                         <include reference="g5H-gw-nos"/>
                                         <include reference="gNh-dG-1no"/>
@@ -2002,8 +2007,6 @@
                                         <include reference="UsX-3v-Ft2"/>
                                         <include reference="nbT-7Y-DEs"/>
                                         <include reference="skA-n5-r6Z"/>
-                                        <include reference="RHI-pH-Wn2"/>
-                                        <include reference="uAr-CU-BEW"/>
                                     </mask>
                                 </variation>
                             </view>
