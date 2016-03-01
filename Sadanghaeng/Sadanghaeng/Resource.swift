@@ -7,6 +7,6 @@
 //
 
 struct Resource {
-    static let baseURLString = "http://localhost:3001"
+    static let baseURLString = "https://www.garim.me"
 
 }

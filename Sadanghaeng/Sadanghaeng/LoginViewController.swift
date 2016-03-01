@@ -15,6 +15,7 @@
 //
 
 import UIKit
+import Alamofire
 import AutoKeyboardScrollView
 
 class LoginViewController: UIViewController {
@@ -83,9 +84,27 @@ class LoginViewController: UIViewController {
                     self.presentViewController(alert, animated:true, completion:nil)
                     return;
                 } else {
-                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc:UINavigationController = storyboard.instantiateViewControllerWithIdentifier("boardListViewController") as! UINavigationController
-                    self.presentViewController(vc, animated: true, completion: nil)
+                    
+                    Alamofire.request(UserRouter.LoginUser(["email": String(emailInput.text!), "password": String(passwordInput.text!)]))
+                        .responseJSON { response in
+                            if let jsonResult = response.result.value {
+                                print(jsonResult)
+                                print(String(jsonResult["status"]!))
+
+                                    //TODO: 이거 status 비교해서 0아니면 jsonResult.value.message 출력해야함
+//                                if String(jsonResult["status"]!) != "0" {
+//                                    let alert = UIAlertController(title: "로그인 실패!", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+//                                } else {
+                                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                    let vc:UINavigationController = storyboard.instantiateViewControllerWithIdentifier("boardListViewController") as! UINavigationController
+                                    self.presentViewController(vc, animated: true, completion: nil)
+//                                }
+                          
+                            }
+                    }
+                    
+                    
+                    
         }
     }
 
