@@ -88,6 +88,7 @@ class LoginViewController: UIViewController {
                     Alamofire.request(UserRouter.LoginUser(["email": String(emailInput.text!), "password": String(passwordInput.text!)]))
                         .responseJSON { response in
                             if let jsonResult = response.result.value {
+
                                 
                                 if let temp:String = jsonResult["status"] as? String{
                                 print(temp)
