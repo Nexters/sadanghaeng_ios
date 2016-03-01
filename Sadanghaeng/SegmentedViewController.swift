@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SegmentedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -47,14 +48,29 @@ class SegmentedViewController: UIViewController, UITableViewDataSource, UITableV
 
         let list6 = Board(name: "뀽아앙", nickname: "ㅇㅇㅇ")!
 
-        let list7 = Board(name: "졸려", nickname: "ww")!
-
         
         print("==========")
         print(User.userId)
+        Alamofire.request(UnivRouter.ReadUnivPosts("56d06fe2666912b04fc99563",["univid": "56d06fe2666912b04fc99563", "filter": "new", "page": 1, "perPage": 7]))
+            .responseJSON { response in
+                if let jsonPreResult = response.result.value {
+
+                    let jsonResult = jsonPreResult["value"] as! [Dictionary<String, AnyObject>]
+                    
+                    for anItem in jsonResult as! [Dictionary<String, AnyObject>] {
+                        let title = anItem["title"] as! String
+                        let list7 = Board(name: title, nickname: "ww")!
+                        
+                        //TODO: 여기서 데이터를 뿌려야하는드덷세너ㅏ딯ㄴ아ㅣ허ㅏㅣㄴ
+                        
+                        print(title)
+                    }
+                    self.lists += [list1, list2, list3, list4,list5,list6]
+                }
+        }
         
         
-        lists += [list1, list2, list3, list4,list5,list6,list7]
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -90,33 +90,31 @@ class LoginViewController: UIViewController {
                             if let jsonResult = response.result.value {
 
                                 
-                                if let temp:String = jsonResult["status"] as? String{
-                                print(temp)
-                                    if temp != "0" {
-                                        print(temp)
-                                        let alert = UIAlertController(title: "로그인 실패!", message: "",preferredStyle: UIAlertControllerStyle.Alert)
+                                if let temp:Int = jsonResult["status"] as? Int{
+                                    if temp != 0 {
+                                        if let tempValue:Dictionary = jsonResult["value"] as? Dictionary<String, AnyObject> {
+                                    
+                                            if let tempMessage:String = tempValue["message"] as? String {
+                                            
+                                                let alert = UIAlertController(title: tempMessage, message: "",preferredStyle: UIAlertControllerStyle.Alert)
+                                                alert.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Cancel, handler: nil))
+                                                
+                                                self.presentViewController(alert, animated:true, completion:nil)
+                                                return;
+                                            }
+                                            
+                                        }
+                                    } else {
+                                        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                        let vc:UINavigationController = storyboard.instantiateViewControllerWithIdentifier("boardListViewController") as! UINavigationController
+                                        self.presentViewController(vc, animated: true, completion: nil)
+                                        User.userId = "ddd";
                                     }
-                                } else{
-//                                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                                    let vc:UINavigationController = storyboard.instantiateViewControllerWithIdentifier("boardListViewController") as! UINavigationController
-//                                    self.presentViewController(vc, animated: true, completion: nil)
                                 }
-                                }
-
-
-                                    //TODO: 이거 status 비교해서 0아니면 jsonResult.value.message 출력해야함
-//                                if String(jsonResult["status"]!) != "0" {
-//                                    let alert = UIAlertController(title: "로그인 실패!", message: "", preferredStyle: UIAlertControllerStyle.Alert)
-//                                } else {
-                                    User.userId = "ddd";
-                                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                                    let vc:UINavigationController = storyboard.instantiateViewControllerWithIdentifier("boardListViewController") as! UINavigationController
-                                    self.presentViewController(vc, animated: true, completion: nil)
-//                                }
-                          
 
                             }
                     }
+                }
                     
                     
                     
