@@ -95,6 +95,7 @@ class LoginViewController: UIViewController {
 //                                if String(jsonResult["status"]!) != "0" {
 //                                    let alert = UIAlertController(title: "로그인 실패!", message: "", preferredStyle: UIAlertControllerStyle.Alert)
 //                                } else {
+                                    User.userId = "ddd";
                                     let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                     let vc:UINavigationController = storyboard.instantiateViewControllerWithIdentifier("boardListViewController") as! UINavigationController
                                     self.presentViewController(vc, animated: true, completion: nil)

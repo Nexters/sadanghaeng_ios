@@ -50,6 +50,10 @@ class SegmentedViewController: UIViewController, UITableViewDataSource, UITableV
         let list7 = Board(name: "졸려", nickname: "ww")!
 
         
+        print("==========")
+        print(User.userId)
+        
+        
         lists += [list1, list2, list3, list4,list5,list6,list7]
     }
     

@@ -26,7 +26,6 @@ class ViewController: UIViewController,UITextFieldDelegate {
             print(testData)
         }
         
-        
         Alamofire.request(PostRouter.ReadPosts(["sortBy": "createdAt"]))
             .responseJSON { response in
                 if let jsonResult = response.result.value {
