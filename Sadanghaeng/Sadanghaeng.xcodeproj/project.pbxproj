@@ -32,6 +32,8 @@
 		97368C971C54AF6400B05A0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97368C951C54AF6400B05A0F /* LaunchScreen.storyboard */; };
 		97368CA21C54AF6400B05A0F /* SadanghaengTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97368CA11C54AF6400B05A0F /* SadanghaengTests.swift */; };
 		97368CAD1C54AF6400B05A0F /* SadanghaengUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97368CAC1C54AF6400B05A0F /* SadanghaengUITests.swift */; };
+		9749C3941C85430400DB895C /* UnivRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749C3931C85430400DB895C /* UnivRouter.swift */; };
+		9749C3961C85464F00DB895C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749C3951C85464F00DB895C /* User.swift */; };
 		976B58E31C5E1CB5002D6069 /* PostRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976B58E21C5E1CB5002D6069 /* PostRouter.swift */; };
 		97A6A2161C62272D00FA1429 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A6A2151C62272D00FA1429 /* UserRouter.swift */; };
 		97A6A2181C62286D00FA1429 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A6A2171C62286D00FA1429 /* Resource.swift */; };
@@ -89,6 +91,8 @@
 		97368CA81C54AF6400B05A0F /* SadanghaengUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SadanghaengUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97368CAC1C54AF6400B05A0F /* SadanghaengUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SadanghaengUITests.swift; sourceTree = "<group>"; };
 		97368CAE1C54AF6400B05A0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9749C3931C85430400DB895C /* UnivRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnivRouter.swift; sourceTree = "<group>"; };
+		9749C3951C85464F00DB895C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		976B58E21C5E1CB5002D6069 /* PostRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostRouter.swift; sourceTree = "<group>"; };
 		97A6A2151C62272D00FA1429 /* UserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
 		97A6A2171C62286D00FA1429 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 			children = (
 				976B58E21C5E1CB5002D6069 /* PostRouter.swift */,
 				97A6A2151C62272D00FA1429 /* UserRouter.swift */,
+				9749C3931C85430400DB895C /* UnivRouter.swift */,
 			);
 			name = Router;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				960791D01C71B85900B8D15F /* Candy.swift */,
+				9749C3951C85464F00DB895C /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -488,9 +494,11 @@
 				966032B01C5EFC12009B69C2 /* CustomUIButton.swift in Sources */,
 				964144981C6D759800DC07C0 /* AutoKeyboardScrollView.swift in Sources */,
 				969B3D1C1C6C6A5300183570 /* DrawLine.swift in Sources */,
+				9749C3961C85464F00DB895C /* User.swift in Sources */,
 				97368C8F1C54AF6400B05A0F /* ViewController.swift in Sources */,
 				97A6A2161C62272D00FA1429 /* UserRouter.swift in Sources */,
 				960791CF1C71B80C00B8D15F /* SeachView.swift in Sources */,
+				9749C3941C85430400DB895C /* UnivRouter.swift in Sources */,
 				976B58E31C5E1CB5002D6069 /* PostRouter.swift in Sources */,
 				9671B4601C63386B000FBC13 /* CommentTableViewCell.swift in Sources */,
 				9671B45B1C632AD5000FBC13 /* SegTableViewCell.swift in Sources */,
