@@ -45,7 +45,7 @@ enum UserRouter: URLRequestConvertible {
     }
     
     var URLRequest: NSMutableURLRequest {
-        let URL = NSURL(string: PostRouter.baseURLString)!
+        let URL = NSURL(string: UserRouter.baseURLString)!
         let mutableURLRequest = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(path))
         mutableURLRequest.HTTPMethod = method.rawValue
         
