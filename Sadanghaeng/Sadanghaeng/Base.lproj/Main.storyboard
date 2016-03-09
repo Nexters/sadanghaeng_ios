@@ -582,7 +582,7 @@
                                             <rect key="frame" x="0.0" y="-67" width="414" height="737"/>
                                         </variation>
                                     </imageView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ni-rt-898" userLabel="containerView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ni-rt-898" userLabel="containerView">
                                         <rect key="frame" x="50" y="63" width="275" height="521"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garim_small" translatesAutoresizingMaskIntoConstraints="NO" id="0xw-ka-5ly" userLabel="logo">

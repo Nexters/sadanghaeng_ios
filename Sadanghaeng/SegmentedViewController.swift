@@ -22,7 +22,7 @@ class SegmentedViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         
         // Load the sample data.
-        loadSampleLists()
+        loadPostLists()
         // 테이블 row가 아닌건 안보이게
         let tableViewFooter = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 10))
         tableViewFooter.backgroundColor = UIColor.clearColor()
@@ -34,21 +34,7 @@ class SegmentedViewController: UIViewController, UITableViewDataSource, UITableV
         postButton.layer.shadowRadius = 5.0
     }
     
-    func loadSampleLists() {
-        //let photo1 = UIImage(named: "meal1")!
-        let list1 = Board(name: "글이 업쏘", nickname: "구경꾼")!
-        
-        //let photo2 = UIImage(named: "meal2")!
-        let list2 = Board(name: "맥북 좋앙😊", nickname: "apple")!
-        
-        //let photo3 = UIImage(named: "meal3")!
-        let list3 = Board(name: "밥줘라 밥", nickname: "가으리멍멍")!
-        let list4 = Board(name: "아 왜 안돼", nickname: "ㅁ")!
-        let list5 = Board(name: "스크롤 생겨라", nickname: "ㅎ")!
-
-        let list6 = Board(name: "뀽아앙", nickname: "ㅇㅇㅇ")!
-
-        
+    func loadPostLists() {
         print("==========")
         print(User.userId)
         Alamofire.request(UnivRouter.ReadUnivPosts("56d06fe2666912b04fc99563",["univid": "56d06fe2666912b04fc99563", "filter": "new", "page": 1, "perPage": 7]))
@@ -57,20 +43,17 @@ class SegmentedViewController: UIViewController, UITableViewDataSource, UITableV
 
                     let jsonResult = jsonPreResult["value"] as! [Dictionary<String, AnyObject>]
                     
-                    for anItem in jsonResult as! [Dictionary<String, AnyObject>] {
+                    for anItem in jsonResult {
                         let title = anItem["title"] as! String
-                        let list7 = Board(name: title, nickname: "ww")!
+                        let author = anItem["author"] as! String
+                        let listItem = Board(name: title, nickname: author)!
                         
-                        //TODO: 여기서 데이터를 뿌려야하는드덷세너ㅏ딯ㄴ아ㅣ허ㅏㅣㄴ
-                        
-                        print(title)
+                        self.lists.append(listItem)
                     }
-                    self.lists += [list1, list2, list3, list4,list5,list6]
+                    self.myTableView.reloadData();
                 }
         }
-        
-        
-        
+
     }
     
     override func didReceiveMemoryWarning() {

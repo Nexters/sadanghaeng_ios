@@ -108,7 +108,9 @@ class LoginViewController: UIViewController {
                                         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                         let vc:UINavigationController = storyboard.instantiateViewControllerWithIdentifier("boardListViewController") as! UINavigationController
                                         self.presentViewController(vc, animated: true, completion: nil)
-                                        User.userId = "ddd";
+                                        let userDic = jsonResult["value"] as! Dictionary<String, AnyObject>;
+                                        User.userId = userDic["userId"] as! String;
+                                        User.univId = userDic["univId"] as! String;
                                     }
                                 }
 
