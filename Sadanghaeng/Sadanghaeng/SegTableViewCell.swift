@@ -10,8 +10,13 @@ import UIKit
 
 class SegTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var nickname: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var viewCount: UILabel!
+    @IBOutlet weak var like: UILabel!
+    @IBOutlet weak var dislike: UILabel!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
