@@ -582,7 +582,7 @@
                                             <rect key="frame" x="0.0" y="-67" width="414" height="737"/>
                                         </variation>
                                     </imageView>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ni-rt-898" userLabel="containerView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ni-rt-898" userLabel="containerView">
                                         <rect key="frame" x="50" y="63" width="275" height="521"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="garim_small" translatesAutoresizingMaskIntoConstraints="NO" id="0xw-ka-5ly" userLabel="logo">
@@ -944,6 +944,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xd4-YA-IJk">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Q0C-pc-xry"/>
+                                    <constraint firstAttribute="width" constant="39" id="vWd-4D-dYH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Q0C-pc-xry"/>
+                                        <exclude reference="vWd-4D-dYH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Q0C-pc-xry"/>
+                                        <include reference="vWd-4D-dYH"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOz-2x-JDA" customClass="CustomUIButton" customModule="Sadanghaeng" customModuleProvider="target">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.25098039220000001" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="2bV-M2-aNF"/>
+                                    <constraint firstAttribute="width" constant="64" id="WbE-to-jvs"/>
+                                </constraints>
+                                <state key="normal" image="post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2bV-M2-aNF"/>
+                                        <exclude reference="WbE-to-jvs"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2bV-M2-aNF"/>
+                                        <include reference="WbE-to-jvs"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="8pN-dL-aDh" kind="show" id="Zo3-ff-zjc"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qk0-rK-Sqm">
+                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                <segments>
+                                    <segment title="NEW"/>
+                                    <segment title="BEST"/>
+                                </segments>
+                                <color key="tintColor" red="0.99215686270000003" green="0.25098039220000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentedControlActionChanged:" destination="c4K-a7-9at" eventType="valueChanged" id="TKh-ch-Ffo"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ynr-YX-ZH3">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1635,65 +1694,6 @@
                                     <outlet property="delegate" destination="c4K-a7-9at" id="RGB-HZ-gBW"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xd4-YA-IJk">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Q0C-pc-xry"/>
-                                    <constraint firstAttribute="width" constant="39" id="vWd-4D-dYH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Q0C-pc-xry"/>
-                                        <exclude reference="vWd-4D-dYH"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="Q0C-pc-xry"/>
-                                        <include reference="vWd-4D-dYH"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOz-2x-JDA" customClass="CustomUIButton" customModule="Sadanghaeng" customModuleProvider="target">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.99215686270000003" green="0.25098039220000001" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="2bV-M2-aNF"/>
-                                    <constraint firstAttribute="width" constant="64" id="WbE-to-jvs"/>
-                                </constraints>
-                                <state key="normal" image="post">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="2bV-M2-aNF"/>
-                                        <exclude reference="WbE-to-jvs"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="2bV-M2-aNF"/>
-                                        <include reference="WbE-to-jvs"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="8pN-dL-aDh" kind="show" id="Zo3-ff-zjc"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qk0-rK-Sqm">
-                                <rect key="frame" x="-60" y="-14" width="121" height="29"/>
-                                <segments>
-                                    <segment title="NEW"/>
-                                    <segment title="BEST"/>
-                                </segments>
-                                <color key="tintColor" red="0.99215686270000003" green="0.25098039220000001" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="segmentedControlActionChanged:" destination="c4K-a7-9at" eventType="valueChanged" id="TKh-ch-Ffo"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1713,10 +1713,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Ynr-YX-ZH3"/>
                                 <exclude reference="Xd4-YA-IJk"/>
                                 <exclude reference="EOz-2x-JDA"/>
                                 <exclude reference="Qk0-rK-Sqm"/>
+                                <exclude reference="Ynr-YX-ZH3"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="3Ak-ss-LdS"/>
@@ -1734,10 +1734,10 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Ynr-YX-ZH3"/>
                                 <include reference="Xd4-YA-IJk"/>
                                 <include reference="EOz-2x-JDA"/>
                                 <include reference="Qk0-rK-Sqm"/>
+                                <include reference="Ynr-YX-ZH3"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="3Ak-ss-LdS"/>
@@ -2045,6 +2045,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="emailInputField" destination="0JC-QT-Gsb" id="QFy-0g-YZc"/>
+                        <outlet property="pwConfirmField" destination="UNj-M1-6iE" id="ggg-Ib-Nee"/>
                         <outlet property="pwInputField" destination="cMp-My-4hn" id="pbp-Da-07Y"/>
                     </connections>
                 </viewController>

@@ -33,28 +33,43 @@ class RegisterViewController: UIViewController {
 
     @IBAction func registerButtonTapped(sender: UIButton) {
         
-        if let field = emailInputField.text {
-            if field.isEmpty{
-                let alert = UIAlertController(title: "빠짐없이 입력해주세요!", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+        
+            if (emailInputField.text!.isEmpty) {
+                let alert = UIAlertController(title: "이멜 입력해주세요!", message: "", preferredStyle: UIAlertControllerStyle.Alert)
                 alert.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Cancel, handler: nil))
                 self.presentViewController(alert, animated:true, completion:nil)
                 return;
             }else{
-                print("ok")
-                let alert = UIAlertController(title: "이메일 발송 완료!", message: "이메일을 확인해주세요", preferredStyle: UIAlertControllerStyle.Alert)
-                
-                let okAction: UIAlertAction = UIAlertAction(title: "확인", style: .Default) { action -> Void in
-                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc:UINavigationController = storyboard.instantiateViewControllerWithIdentifier("startControllerSegue") as! UINavigationController
-                    self.presentViewController(vc, animated: true, completion: nil)
+                if (pwInputField.text!.isEmpty) {
+                    let alert = UIAlertController(title: "비밀번호를 입력해주세요!", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Cancel, handler: nil))
+                    self.presentViewController(alert, animated:true, completion:nil)
+                    return;
+                } else {
+                    if (pwConfirmField.text!.isEmpty) {
+                        print("ss")
+                        let alert = UIAlertController(title: "비밀번호 확인을 입력해주세요!", message: "", preferredStyle: UIAlertControllerStyle.Alert)
+                        alert.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Cancel, handler: nil))
+                        self.presentViewController(alert, animated:true, completion:nil)
+                        return;
+                    } else {
+                                        print("ok")
+                                        let alert = UIAlertController(title: "이메일 발송 완료!", message: "이메일을 확인해주세요", preferredStyle: UIAlertControllerStyle.Alert)
+                        
+                                        let okAction: UIAlertAction = UIAlertAction(title: "확인", style: .Default) { action -> Void in
+                                            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                            let vc:UINavigationController = storyboard.instantiateViewControllerWithIdentifier("startControllerSegue") as! UINavigationController
+                                            self.presentViewController(vc, animated: true, completion: nil)
+                                        }
+                                        alert.addAction(okAction)
+                                        self.presentViewController(alert, animated:true, completion:nil)
+                    }
                 }
-                alert.addAction(okAction)
-                self.presentViewController(alert, animated:true, completion:nil)
-            }
-        } else {
-           print("앙?")
 
+                /*처음 isEmpty 끝*/
+            }
+            /*맨 처음 if문 끝*/
         }
     }
     
-}
+
